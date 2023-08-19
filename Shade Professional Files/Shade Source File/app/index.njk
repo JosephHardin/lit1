@@ -1,0 +1,413 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Saas Service",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right landing-1-menu",
+"absolute_header" : "true",
+container_fluid : true,
+header_button : true,
+sticky_header :true,
+hideMegamenu : false,
+menu_wrapper_class : "mx-auto",
+additional_button_classes : "header-btn-l1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "btn log-in-btn btn-style-02 focus-reset",
+header_button_text : "Get started"
+
+
+
+})}}
+
+
+<!-- Hero Area -->
+
+<div class="hero-area-l1  position-relative background-property" style="background: url(./image/landing-1/hero-bg.png);">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-10 order-lg-1 order-1" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                <div class="content">
+                    <h2>Get started your business.</h2>
+                    <p>With lots of unique blocks, you can easily build a page without coding. Build your next website
+                        fast.</p>
+                    <div class="l1-create-acc-btn">
+                        <a href="#" class="btn btn-style-02">Create a free account <i class="fas fa-angle-right"></i></a>
+                    </div>
+                    <span>No Credit Card Necessary</span>
+                </div>
+            </div>
+            <div class="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-8 order-lg-1 order-0" data-aos="fade-left" data-aos-delay="700" data-aos-duration="1000">
+                <div class="hero-image-group-l1">
+                    <div class="image-1">
+                        <img class="w-100" src="image/landing-1/woman.png" alt="image">
+                    </div>
+                    <div class="image-2">
+                        <img class="horizontal-move" src="image/landing-1/chat-icon.svg" alt="image">
+                    </div>
+                    <div class="image-3">
+                        <img class="vertical-move" src="image/landing-1/icon-3d-heart.svg" alt="image">
+                    </div>
+                    <div class="image-4">
+                        <img class="spin" src="image/landing-1/icon-chart.svg" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Features Area -->
+
+<div class="feature-area-l1">
+    <div class="container">
+        <div class="row feature-l1-items justify-content-center">
+            {% set feature = [
+            {
+            "source":"icon-3d-target.svg",
+            "title": "User centered design",
+            "content": "With lots of unique blocks, you can easily build a page without coding. Build your next website
+            within few minutes."
+            },
+            {
+            "source":"icon-3d-coin.svg",
+            "title": "Earn extra money",
+            "content": "With lots of unique blocks, you can easily build a page without coding. Build your next website
+            within few minutes."
+            },
+            {
+            "source":"icon-3d-rocket.png",
+            "title": "Launch your service",
+            "content": "With lots of unique blocks, you can easily build a page without coding. Build your next website
+            within few minutes."
+            }
+
+            ]
+            %}
+            {% for item in feature %}
+            <div class="col-lg-4 col-md-6 col-sm-11 col-xs-12" data-aos="fade-up" data-aos-duration="800"
+                data-aos-once="true">
+                <div class="content h-100">
+                    <img src="image/landing-1/{{item.source}}" alt="image">
+                    <h5>{{item.title}}</h5>
+                    <p>{{item.content}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="feature-border-l1"></div>
+            </div>
+        </div>
+        <div class="row customer-area-l1 justify-content-center align-items-center ">
+            <div class="col-xl-5 col-lg-5 col-md-10">
+                <div class="section__heading">
+                    <h2 data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">Trusted by 25,000+ happy customers.</h2>
+                    <p data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">With lots of unique blocks, you can easily build <br
+                            class="d-none d-sm-block d-md-none d-xl-block">
+                        a page without coding. Build your next website <br
+                            class="d-none d-sm-block d-md-none d-xl-block">
+                        within few minutes.</p>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-7 col-md-10 offset-xl-1">
+                <div class="row user-rating-box-area">
+                    <div class="col-sm-6 col-xs-8" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+                        <div class="h-100 rate-box bg-primary">
+                            <h3>
+                                15k
+                            </h3>
+                            <p>Active users visiting <br> us every month!</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-8" data-aos="fade-left" data-aos-delay="800" data-aos-duration="1000">
+                        <div class="h-100 rate-box rate-box-2 bg-cloudburst">
+                            <h3>
+                                4.9
+                            </h3>
+                            <ul class="list-inline d-flex">
+                                <li class=""><i class="fas fa-star"></i></li>
+                                <li class=""><i class="fas fa-star"></i></li>
+                                <li class=""><i class="fas fa-star"></i></li>
+                                <li class=""><i class="fas fa-star"></i></li>
+                                <li class=""><i class="fas fa-star"></i></li>
+                            </ul>
+                            <p>1,938 Rating</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Content Area-1 -->
+
+<div class="content-are-l1-1 bg-primary">
+    <div class="curve-image-l1">
+        <img src="./image/landing-1/white-shape-top.svg" alt="image" class="w-100">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-5 col-xl-5 col-lg-6 col-md-10 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="content-area-l1-image-group">
+                    <div class="image-1">
+                        <img class="w-100" src="image/landing-1/content-man-image.png" alt="image">
+                    </div>
+                    <div class="image-2">
+                        <img class="swing" src="image/landing-1/bell-image.svg" alt="image">
+                    </div>
+                    <div class="image-3 d-none d-sm-block">
+                        <img src="image/landing-1/plant-image.svg" alt="image">
+                    </div>
+                </div>
+            </div>
+            <div class="offset-xxl-2 col-xxl-5 offset-xl-1 col-xl-6 col-lg-6 col-md-10 order-0 order-lg-1" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                <div class="content-box-l1-1 section__heading">
+                    <div class="cap-image d-none d-sm-block">
+                        <img class="vertical-move" src="image/landing-1/h1-content2-card-tupi.png" alt="image">
+                    </div>
+                    <h2>Get access to your daily cost.</h2>
+                    <p>With lots of unique blocks, you can easily build a page without coding. Build your next website
+                        within few minutes.</p>
+                    <div class="l1-get-start-btn">
+                        <a href="#" class="btn btn-style-02">Get started now <i class="fas fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content Area-2  -->
+
+<div class="content-area-2-l1">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-10" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="content-box-2-l1 section__heading">
+                    <h2>We create value to your business</h2>
+                    <p>With lots of unique blocks, you can easily build a page without coding. Build your next website
+                        within few minutes.</p>
+                    <ul class="list-unstyled number-content-box-l1">
+                        <li class="d-flex align-items-start">
+                            <div class="number">
+                                <span>1</span>
+                            </div>
+                            <div class="content">
+                                <h4>User centered design</h4>
+                                <p>With lots of unique blocks, you can easily build a page without coding. </p>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start">
+                            <div class="number number--2">
+                                <span>2</span>
+                            </div>
+                            <div class="content">
+                                <h4>Get latest updates</h4>
+                                <p>With lots of unique blocks, you can easily build a page without coding. </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="offset-xxl-1 col-xxl-5 offset-xl-1 col-xl-5 col-lg-6 col-md-10">
+                <div class="content-2-l1-image-group" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                    <div class="image-1">
+                        <img class="w-100" src="image/landing-1/h1-content-2-women.png" alt="image">
+                    </div>
+
+                    <div class="image-2">
+                        <img class="w-100 spin" src="image/landing-1/h1-content-2-globe.png" alt="image">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Testimonial Area -->
+
+<div class="testimonial-area-l1 position-relative bg-skeptic">
+    <div class="curve-image-l1">
+        <img src="./image/landing-1/white-shape-top.svg" alt="image" class="w-100">
+    </div>
+    <div class="testimonial-area-l-image-group">
+        <div class="image-1">
+            <img class="w-100 vertical-move" src="image/landing-1/h1-client-heart-shape.png" alt="image">
+        </div>
+
+        <div class="image-2">
+            <img class="w-100 spin" src="image/landing-1/h1-client-start-shape.png" alt="image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-8" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
+                <div class="section__heading text-center">
+                    <h2>Customers are loving it</h2>
+                    <p>With lots of unique blocks, you can easily build a page without coding. Build your next website
+                        fast.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row testimonial-area-l1-items  justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-11 col-xs-12" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                <div class="content h-100 text-center">
+                    <img src="image/landing-1/team-image.png" alt="image">
+                    <p>“<span>You made it so simple.</span> My new site is so much faster and easier to work with than
+                        my old site.”</p>
+                    <h5>Alan Farmer</h5>
+                    <small>Digital Marketer</small>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-11 col-xs-12" data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000">
+                <div class="content h-100 text-center">
+                    <img src="image/landing-1/team-image-2.png" alt="image">
+                    <p>“Simply the best. <span>Better than all the rest.</span> I’d recommend this product to beginners
+                        and advanced users.”</p>
+                    <h5>Alan Farmer</h5>
+                    <small>Digital Marketer</small>
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-11 col-xs-12" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000">
+                <div class="content h-100 text-center">
+                    <img src="image/landing-1/team-image-3.png" alt="image">
+                    <p>“<span>Must have service</span> for all, who want to be successful Product Designer or
+                        Interaction Designer.”</p>
+                    <h5>Alan Farmer</h5>
+                    <small>Digital Marketer</small>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Contact form Area -->
+
+<div class="contact-form-area-l1 bg-mirage position-relative">
+    <div class="contact-area-l-image-group">
+        <div class="image-1 d-none d-md-block" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+            <img class="w-100" src="image/landing-1/h1-cta-blur-shape-1.png" alt="image">
+        </div>
+
+        <div class="image-2 d-none d-md-block" data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">
+            <img class="w-100 spin" src="image/landing-1/h1-cta-blur-shape-2.png" alt="image">
+        </div>
+        <div class="image-3 d-none d-md-block" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+            <img class="w-100 vertical-move" src="image/landing-1/h1-cta-rocket-image.png" alt="image">
+        </div>
+        <div class="image-4 d-none d-md-block" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1200">
+            <img class="w-100 horizontal-move" src="image/landing-1/h1-cta-flower-image.png" alt="image">
+        </div>
+    </div>
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section__heading text-center">
+                    <h2>Get a demo</h2>
+                    <p>
+                        With lots of unique blocks, you can easily build a page
+                        <br class="d-none d-sm-block" />
+                        without coding. Build your next website fast.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xxl-4 col-lg-6 col-md-8 col-sm-10 " data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="contact-form-l1">
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="name">
+                                Your Name
+                            </label>
+                            <input type="text" name="name" placeholder="Type your name" id="name" class="form-control ">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                Email Address
+                            </label>
+                            <input type="email" name="email" placeholder="Enter your email" id="email"
+                                class="form-control ">
+                        </div>
+                        <div class="form-group">
+                            <label for="companySize">Company Size</label>
+                            <select name="companySize" id="companySize" class="nice-select">
+                                <option data-display="Select an option">
+                                    Select an option
+                                </option>
+                                <option value=" 10 - 30">
+                                    10 - 30
+                                </option>
+                                <option value=" 30 - 60">
+                                    30 - 60
+                                </option>
+                                <option value=" 60 - 100">
+                                    60 - 100
+                                </option>
+                                <option value=" 100+">
+                                    100+
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="companybudget">Approx. Budget</label>
+                            <select name="companybudget" id="companybudget" class="nice-select">
+                                <option data-display="Select an option">
+                                    Select an option
+                                </option>
+                                <option value=" 10 - 30">
+                                    100$ - 300$
+                                </option>
+                                <option value=" 30 - 60">
+                                    300$ - 600$
+                                </option>
+                                <option value=" 60 - 100">
+                                    600$ - 100$
+                                </option>
+                                <option value=" 100+">
+                                    100$+
+                                </option>
+                            </select>
+                        </div>
+                        <a class="btn w-100 get-free-demo-btn btn-style-02"> Get a free demo</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Area -->
+
+{% include "footer-1.njk" %}
+
+
+
+
+
+{% endblock %}

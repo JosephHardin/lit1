@@ -1,0 +1,222 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Portfolio Details 04",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right sign-in-menu-1",
+"absolute_header" : "true",
+container_fluid : false,
+sticky_header :true,
+menu_wrapper_class : "mx-auto",
+hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+
+<!-- Portfolio  Area -->
+
+<div class="portfolio-details-area-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="portfolio-details-area-4-bg">
+                    <div class="row justify-content-center">
+                        <div class="col-xxl-7 col-xl-8 col-lg-9 col-md-10">
+                            <div class="heading text-center">
+                                <h2>Project information</h2>
+                                <p>NYmag uses the most trending layouts and mockups for its eyecathing and current world
+                                    news showcase. But with a constantly growing product palette, it was important to
+                                    establish a strategic and aesthetic focus for the brand.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="portfolio-det-area-4-bg-image"></div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center project-details-item-4-items">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="text-center content">
+                                <h6>Project Name:</h6>
+                                <span>Systemio</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="text-center content">
+                                <h6>Client:</h6>
+                                <span>Minimalist International</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="text-center content">
+                                <h6>Finshing Date:</h6>
+                                <span>01 january, 2021</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="text-center content">
+                                <h6>Category:</h6>
+                                <span>Marketing, SEO</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="project-details-item-4-btn text-center">
+                                <a href="#" class="btn">Visit website</a>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<div class="process-area-pro-det-4">
+    <div class="container">
+        <div class="row project-brief-area-items justify-content-center">
+            <div class="col-lg-5 col-md-6">
+              <div class="content">
+                <h2>Project brief</h2>
+                <p>Holistic brand redesign focusing product design, interface design, studio photograph style, icon design, editorial design, web design &amp; motion design.</p>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-6">
+              <div class="content">
+                <h2>Our Process</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row service-details-process-items text-center text-lg-start">
+            <div class="col-lg-3 col-sm-6">
+              <div class="number-box">
+                <span>1</span>
+              </div>
+              <div class="content-box">
+                <h6>Analysis</h6>
+                <p>Enterprise definition is - a project or undertaking that</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="number-box">
+                <span>2</span>
+              </div>
+              <div class="content-box">
+                <h6>Strategy</h6>
+                <p>Enterprise definition is - a project or undertaking that</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="number-box">
+                <span>3</span>
+              </div>
+              <div class="content-box">
+                <h6>Performance</h6>
+                <p>Enterprise definition is - a project or undertaking that</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="number-box">
+                <span>4</span>
+              </div>
+              <div class="content-box">
+                <h6>Improvements</h6>
+                <p>Enterprise definition is - a project or undertaking that</p>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-9">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 col-md-8">
+                        <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                        <div class="content">
+                            <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                                top brands as well as for cool startups. </p>
+                        </div>
+
+                        <div class="social-icons">
+                            <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title">Help menu</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Works</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Support</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">contact </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Products</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">Shades Pro</a></li>
+                                <li><a href="#">Essentiol Blocks</a></li>
+                                <li><a href="#">Avasta Dash</a></li>
+                                <li><a href="#">vApp Landing Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

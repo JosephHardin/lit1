@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Blog Details </title>
+  <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon">
+  <!-- Bootstrap , fonts & icons  -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./fonts/icon-font/css/style.css">
+  <link rel="stylesheet" href="./fonts/typography-font/typo.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-5/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Plugin'stylesheets  -->
+  <link rel="stylesheet" href="./plugins/aos/aos.min.css">
+  <link rel="stylesheet" href="./plugins/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="./plugins/nice-select/nice-select.min.css">
+  <link rel="stylesheet" href="./plugins/slick/slick.min.css">
+  <!-- Vendor stylesheets  -->
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- Custom stylesheet -->
+</head>
+
+<body data-theme-mode-panel-active data-theme="light" style="font-family: 'Mazzard H';" class="loading">
+  <div class="site-wrapper overflow-hidden position-relative">
+    <!-- Site Header -->
+    <!-- Preloader -->
+    <!-- <div id="loading">
+    <div class="preloader">
+     <img src="./image/preloader.gif" alt="preloader">
+   </div>
+   </div>    -->
+    <!--Site Header Area -->
+    <header class="site-header site-header--menu-right sign-in-menu-1 site-header--absolute site-header--sticky">
+      <div class="container">
+        <nav class="navbar site-navbar">
+          <!-- Brand Logo-->
+          <div class="brand-logo">
+            <a href="#">
+              <!-- light version logo (logo must be black)-->
+              <img src="image/logo/logo-black.png" alt="" class="light-version-logo">
+              <!-- Dark version logo (logo must be White)-->
+              <img src="image/logo/logo-white.png" alt="" class="dark-version-logo">
+            </a>
+          </div>
+          <div class="menu-block-wrapper">
+            <div class="menu-overlay"></div>
+            <nav class="menu-block" id="append-menu-header">
+              <div class="mobile-menu-head">
+                <div class="go-back">
+                  <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="site-menu-main">
+                <li class="nav-item nav-item-has-children has-megamenu">
+                  <a href="#" class="nav-link-item drop-trigger">Landings <i class="fas fa-angle-down"></i></a>
+                  <div class="sub-menu megamenu  megadropdown-center  d-lg-flex align-items-center" id="submenu-100">
+                    <div class="col-lg-4 d-none d-lg-block">
+                      <div class="mega-menu-image">
+                        <img class="w-100" src="./image/landing-2/people-3.png" alt="image">
+                      </div>
+                    </div>
+                    <ul class="col-lg-8 col-12 row-lg list-unstyled py-lg-7">
+                      <li class="col-lg-3">
+                        <div class="single-dropdown-block">
+                          <a href="index.html" class="mega-drop-menu-item sub-menu--item">Saas Service</a>
+                          <a href="index-2.html" class="mega-drop-menu-item sub-menu--item">Job Directory</a>
+                          <a href="index-3.html" class="mega-drop-menu-item sub-menu--item">Startup Agency</a>
+                          <a href="index-4.html" class="mega-drop-menu-item sub-menu--item">Industry</a>
+                          <a href="index-5.html" class="mega-drop-menu-item sub-menu--item">Furniture Shop</a>
+                        </div>
+                      </li>
+                      <li class="col-lg-3">
+                        <div class="single-dropdown-block">
+                          <a href="index-6.html" class="mega-drop-menu-item sub-menu--item">Software</a>
+                          <a href="index-7.html" class="mega-drop-menu-item sub-menu--item">Real Estate</a>
+                          <a href="index-8.html" class="mega-drop-menu-item sub-menu--item">Finance Service</a>
+                          <a href="index-9.html" class="mega-drop-menu-item sub-menu--item">Mental Health</a>
+                          <a href="index-10.html" class="mega-drop-menu-item sub-menu--item">Saas Applications</a>
+                        </div>
+                      </li>
+                      <li class="col-lg-3">
+                        <div class="single-dropdown-block">
+                          <a href="index-11.html" class="mega-drop-menu-item sub-menu--item">Software 2.0</a>
+                          <a href="index-12.html" class="mega-drop-menu-item sub-menu--item">Course</a>
+                          <a href="index-13.html" class="mega-drop-menu-item sub-menu--item">App</a>
+                          <a href="index-14.html" class="mega-drop-menu-item sub-menu--item">Saas Subscription</a>
+                          <a href="index-15.html" class="mega-drop-menu-item sub-menu--item">Digital Service</a>
+                        </div>
+                      </li>
+                      <li class="col-lg-3">
+                        <div class="single-dropdown-block">
+                          <a href="index-16.html" class="mega-drop-menu-item sub-menu--item">Mobile App</a>
+                          <a href="index-17.html" class="mega-drop-menu-item sub-menu--item">Desktop App</a>
+                          <a href="index-18.html" class="mega-drop-menu-item sub-menu--item">Web Applications</a>
+                          <a href="index-19.html" class="mega-drop-menu-item sub-menu--item">eBook</a>
+                          <a href="index-20.html" class="mega-drop-menu-item sub-menu--item">Social App</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item nav-item-has-children">
+                  <a href="#" class="nav-link-item drop-trigger">Pages <i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul class="sub-menu" id="submenu-9">
+                    <li class="sub-menu--item">
+                      <a href="about-us.html">About Us</a>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Contact Us<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-101">
+                        <li class="sub-menu--item">
+                          <a href="contact-1.html">Contact 01</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="contact-2.html">Contact 02</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Blog<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-10">
+                        <li class="sub-menu--item">
+                          <a href="blog-category.html">Blog Category</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="blog-regular.html">Blog Regular</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="blog-details.html">Blog Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Portfolios<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-13">
+                        <li class="sub-menu--item">
+                          <a href="portfolio-1.html">Portfolio Grid</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="portfolio-2.html">Portfolio Metro</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="portfolio-3.html">Portfolio Minimal</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Portfolio Details<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-130">
+                        <li class="sub-menu--item">
+                          <a href="portfolio-details-1.html">Portfolio Details 01</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="portfolio-details-2.html">Portfolio Details 02</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="portfolio-details-3.html">Portfolio Details 03</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="portfolio-details-4.html">Portfolio Details 04</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Services<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-11">
+                        <li class="sub-menu--item">
+                          <a href="service-1.html">Service</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="service-details.html">Service Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Career<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-111">
+                        <li class="sub-menu--item">
+                          <a href="career.html">Career</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="career-details.html">Career Details</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Testimonials<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-112">
+                        <li class="sub-menu--item">
+                          <a href="testimonial-1.html">Testimonial 01</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="testimonial-2.html">Testimonial 02</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Pricing<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-12">
+                        <li class="sub-menu--item">
+                          <a href="pricing-1.html">Pricing 01</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="pricing-2.html">Pricing 02</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Account<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-14">
+                        <li class="sub-menu--item">
+                          <a href="sign-in-1.html">Sign In 01</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="sign-in-2.html">Sign In 02</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="sign-in-3.html">Sign In 03</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="sign-up-1.html">Sig Up 01</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="sign-up-2.html">Sign Up 02</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="sign-up-3.html">Sig Up 03</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="reset-pass-1.html">Reset Password 01</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="reset-pass-2.html">Reset Password 02</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="reset-pass-3.html">Reset Password 03</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="sub-menu--item nav-item-has-children">
+                      <a href="#" data-menu-get="h3" class="drop-trigger">Utility<i class="fas fa-angle-down"></i>
+                      </a>
+                      <ul class="sub-menu" id="submenu-15">
+                        <li class="sub-menu--item">
+                          <a href="faq.html">FAQ</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="terms-conditions.html">Terms & Conditions</a>
+                        </li>
+                        <li class="sub-menu--item">
+                          <a href="404.html">404 Error</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="blog-regular.html" class="nav-link-item">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://uxtheme.net/product-support/" class="nav-link-item">Support</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header-btn sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex">
+            <a target="_blank" class="btn download-trail-btn btn focus-reset" href="https://finestdevs.com/shade/">
+              Get Whiter
+            </a>
+          </div>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+          <!--/.Mobile Menu Hamburger Ends-->
+        </nav>
+      </div>
+    </header>
+    <!-- navbar- -->
+    <!-- Blog Details Area -->
+    <div class="inner-blog-details-banner position-relative">
+      <div class="container">
+        <div class="row justify-content-center justify-content-lg-start">
+          <div class="col-xxl-7 col-xl-8 col-lg-10 col-md-10">
+            <div class="blog-details-content">
+              <h2>How is the pandemic affecting the way people work?</h2>
+              <div class="blog-details-banner-item">
+                <ul class="list-unstyled d-flex flex-wrap">
+                  <li>
+                    <i class="far fa-user"></i>
+                    <span>Remote</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-tag"></i>
+                    <span>Full-time</span>
+                  </li>
+                  <li>
+                    <i class="far fa-clock"></i>
+                    <span>Posted 8 hours ago</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blog-details-content-area">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-xl-7 col-lg-8 col-md-12 order-lg-1 order-1">
+            <div class="content">
+              <p>Doubling my 9–5 salary several times in my career is something I never thought would happen. My
+                career went from startup land to call center operator in a short space of time (very limited
+                timespan of 6 months).</p>
+              <p>That meant going from six-figures down to the minimum wage in my home country of Australia. And
+                to top it off, I have no degrees in anything business related — unless you count a sound
+                engineering qualification.</p>
+              <p>That meant going from six-figures down to the minimum wage in my home country of Australia. And
+                to top it off, I have no degrees in anything business related — unless you count a sound
+                engineering qualification.</p>
+              <p>Doubling your salary, or at the very least increasing it significantly, is about breaking the
+                norm and trying a few things that are a bit more radical as you’re about to see with these
+                simple tips below.</p>
+              <h4>The goal should be more than money</h4>
+              <p>Okay so you can make more money but if that’s your only goal, the extra zeroes on your bank
+                balance will get really boring real quick.</p>
+              <div class="quote-area-blog-details position-relative">
+                <p><img class="quote" src="image/blog/quote-icon.png" alt="quote">You can develop side-businesses, side-hustles, and hobbies that can supplement your 9–5
+                  income
+                  source, and they can all put extra money in your pocket that allows you to work less and not
+                  stress so much about bills.</p>
+              </div>
+              <p>If an uneducated guy from the home of the Kangaroo can double their salary, there is definitely
+                hope for you. Popular career websites like “Seek” suggest the typical advice about doing better
+                in your performance review or getting more education from a university. This advice is out of
+                date and I have watched many colleagues fall for this trap and only end up disappointed.</p>
+              <div class="advance-text-area">
+                <div class="d-sm-flex align-items-center">
+                  <div class="image">
+                    <img src="image/blog/blog-advance.png" alt="image">
+                  </div>
+                  <div class="content">
+                    <h4>Most advanced Techniology</h4>
+                    <p>By purchasing or downloading resource (“item” or “file”) you are being granted a
+                      license to use these files for specific uses under certain conditions. Ownership
+                      remains with UXTheme, and you are required to abide by the following terms.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="key-summary-area">
+                <h4>Key Summary</h4>
+                <p>By purchasing or downloading resource (“item” or “file”) you are being granted a license to
+                  use these files for specific uses under certain conditions. Ownership remains with UXTheme,
+                  and you are required to abide by the following terms.</p>
+                <div class="key-summary-list-item">
+                  <ul class="list-unstyled">
+                    <li class="d-flex"><i class="fas fa-square-full"></i><span>You have
+                                    rights for royalty free use of our resources for any or all of your personal and
+                                    commercial projects.</span></li>
+                    <li class="d-flex"><i class="fas fa-square-full"></i><span>You are not
+                                    required to attribute or link to UXTheme in any of projects.</span></li>
+                    <li class="d-flex"><i class="fas fa-square-full"></i><span>We reserve the
+                                    rights to change prices and revise the resources usage policy in any moment.</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tagged-area d-flex align-items-center">
+                <div class="tag-heading">
+                  <h4 class="mb-0 mt-0">Tagged:</h4>
+                </div>
+                <div class="tag-item">
+                  <ul class="list-unstyled d-flex flex-wrap mb-0">
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Innovation</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tagged-area-bottom-border"></div>
+              <div class="blog-previous-next-link-area">
+                <div class="row prev-next-project-items align-items-center justify-content-center">
+                  <div class="col-md-6">
+                    <div class="project-link-area">
+                      <div class="d-flex align-items-center">
+                        <div class="icon-box">
+                          <a href="#"><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        <div class="content-box">
+                          <span>Previous project</span>
+                          <h6>Bohous branding...</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="project-link-area project-link-area-next text-md-end">
+                      <div class="d-flex align-items-center justify-content-end">
+                        <div class="content-box">
+                          <span>Next project</span>
+                          <h6>Kiwistech template...</h6>
+                        </div>
+                        <div class="icon-box">
+                          <a href="#"><i class="fas fa-arrow-left"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="offset-xl-1 col-xl-4 col-lg-4 col-md-10 order-lg-1 order-0">
+            <div class="blog-details-right-sidebar">
+              <div class="sidebar-bg search-form-area">
+                <h4>Search</h4>
+                <form class="position-relative" action="#" method="get">
+                  <input type="text" name="s" id="search" class="form-control" placeholder="Type to search" value="">
+                  <button type="submit" class="search-submit focus-reset"><i
+                                    class="fas fa-search"></i></button>
+                </form>
+              </div>
+              <div class="sidebar-bg recent-posts">
+                <h4>Recent Posts</h4>
+                <div class="recent-post-item">
+                  <div class="post-content">
+                    <div class="post-title">
+                      <h5> <a href="blog-details.html">How To Blow Through Capital At An Incredible
+                          Rate</a></h5>
+                    </div>
+                    <div class="post-date">
+                      <p><a href="#">Jan 14, 2021</a></p>
+                    </div>
+                  </div>
+                  <div class="post-content">
+                    <div class="post-title">
+                      <h5> <a href="blog-details.html">Design Studios That Everyone Should Know About? </a></h5>
+                    </div>
+                    <div class="post-date">
+                      <p><a href="#">Feb 14, 2021</a></p>
+                    </div>
+                  </div>
+                  <div class="post-content">
+                    <div class="post-title">
+                      <h5> <a href="blog-details.html">How To Blow Through Capital At An Incredible
+                          Rate</a></h5>
+                    </div>
+                    <div class="post-date">
+                      <p><a href="#">Mar 2, 2021</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-bg popular-posts">
+                <h4>Popular Posts</h4>
+                <div class="recent-post-item popular-post-item">
+                  <div class="post-content">
+                    <div class="post-title">
+                      <h5> <a href="blog-details.html">How To Blow Through Capital At An Incredible
+                          Rate</a></h5>
+                    </div>
+                    <div class="post-date">
+                      <p><a href="#">Jan 14, 2021</a></p>
+                    </div>
+                  </div>
+                  <div class="post-content">
+                    <div class="post-title">
+                      <h5> <a href="blog-details.html">Design Studios That Everyone Should Know About? </a></h5>
+                    </div>
+                    <div class="post-date">
+                      <p><a href="#">Feb 15, 2021</a></p>
+                    </div>
+                  </div>
+                  <div class="post-content">
+                    <div class="post-title">
+                      <h5> <a href="blog-details.html">How To Blow Through Capital At An Incredible
+                          Rate</a></h5>
+                    </div>
+                    <div class="post-date">
+                      <p><a href="#">Mar 20, 2021</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar-bg blog-categories">
+                <h4>Categories </h4>
+                <div class="categories-item">
+                  <ul class="list-unstyled">
+                    <li><a href="#">Business plans</a></li>
+                    <li><a href="#">Competitive research</a></li>
+                    <li><a href="#">Finance & accounting</a></li>
+                    <li><a href="#">Funding trends</a></li>
+                    <li><a href="#">Franchising</a> </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sidebar-bg blog-archive">
+                <h4>Archive </h4>
+                <div class="archive-item">
+                  <select name="archive" id="archive" class="nice-select">
+                    <option data-display="Select month">
+                      Select Month
+                    </option>
+                    <option value="January">
+                      January
+                    </option>
+                    <option value="Febuary">
+                      Febuary
+                    </option>
+                    <option value="March">
+                      March
+                    </option>
+                    <option value="April">
+                      April
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="sidebar-bg blog-tag-cloud">
+                <h4>Tag Cloud </h4>
+                <div class="tag-cloud-item">
+                  <ul class="list-unstyled d-flex flex-wrap">
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Consultation</a></li>
+                    <li><a href="#">Innovation</a></li>
+                    <li><a href="#">Investment</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Innovation</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comments-area">
+      <div class="comments-area-top-border"></div>
+      <div class="container">
+        <div class="row justify-content-lg-start justify-content-center">
+          <div class="col-xl-7 col-lg-9 col-md-12">
+            <div class="comment-form">
+              <h4>Comments <span>(4)</span></h4>
+              <form action="#">
+                <div class="form-card-area d-xs-flex">
+                  <div class="user-image">
+                    <a href="#"><img src="image/blog/comment-user-1.png" alt="image"></a>
+                  </div>
+                  <div class="user-review-content">
+                    <h5><a href="#">Brandon Howard</a></h5>
+                    <h6><small>Apr 20, 2021 </small><span>|</span><small> 24 minutes ago</small></h6>
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting
+                      Fastland. It was super easy to create, edit and publish.</p>
+                    <div class="reply-btn">
+                      <button type="submit" class="btn focus-reset"><i class="fas fa-arrow-right"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-card-area form-card-area--reply d-xs-flex">
+                  <div class="user-image">
+                    <a href="#"><img src="image/blog/comment-user-2.png" alt="image"></a>
+                  </div>
+                  <div class="user-review-content">
+                    <h5><a href="#">Jennifer Ashley</a></h5>
+                    <h6><small>Apr 20, 2021 </small><span>|</span><small> 24 minutes ago</small></h6>
+                    <p>Some of our customer say’s that they trust us and buy our product without any gitation because they can Nemo enim ipsam voluptatem quia voluptas sit.</p>
+                    <div class="reply-btn">
+                      <button type="submit" class="btn focus-reset"><i class="fas fa-arrow-right"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-card-area d-xs-flex">
+                  <div class="user-image">
+                    <a href="#"><img src="image/blog/comment-user-3.png" alt="image"></a>
+                  </div>
+                  <div class="user-review-content">
+                    <h5><a href="#">Mark Ruffins</a></h5>
+                    <h6><small>Apr 20, 2021 </small><span>|</span><small> 24 minutes ago</small></h6>
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting Fastland. It was super easy to create, edit and publish.</p>
+                    <div class="reply-btn">
+                      <button type="submit" class="btn focus-reset"><i class="fas fa-arrow-right"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-card-area d-xs-flex">
+                  <div class="user-image">
+                    <a href="#"><img src="image/blog/comment-user-4.png" alt="image"></a>
+                  </div>
+                  <div class="user-review-content">
+                    <h5><a href="#">Will Ashryver</a></h5>
+                    <h6><small>Apr 20, 2021 </small><span>|</span><small> 24 minutes ago</small></h6>
+                    <p>OMG! I cannot believe that I have got a brand new landing page after getting Fastland. It was super easy to create, edit and publish.</p>
+                    <div class="reply-btn">
+                      <button type="submit" class="btn focus-reset"><i class="fas fa-arrow-right"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-lg-start justify-content-center">
+          <div class="col-xl-5 col-lg-6 col-md-9">
+            <div class="blog-details-contact-form-area">
+              <h4>Leave a comment</h4>
+              <div class="blog-details-contact-form">
+                <form action="#">
+                  <div class="form-group">
+                    <label>Name*</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="ex: Livia Siphron">
+                  </div>
+                  <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" name="name" id="email" class="form-control" placeholder="ex: john@email.com">
+                  </div>
+                  <div class="form-group">
+                    <label>Subject*</label>
+                    <input type="text" name="subject" id="subject" class="form-control" placeholder="i.e. I want to know about your service">
+                  </div>
+                  <div class="form-group">
+                    <label>Message*</label>
+                    <textarea name="message" id="message" class="form-control" placeholder="Write your messaage or inquiry"></textarea>
+                  </div>
+                  <div class="send-btn">
+                    <button type="submit" class="btn">Send</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Footer Area-->
+    <footer class="footer-sign-in-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-sm-9">
+            <div class="row">
+              <div class="col-xl-9 col-lg-10 col-md-8">
+                <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                <div class="content">
+                  <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                    top brands as well as for cool startups. </p>
+                </div>
+                <div class="social-icons">
+                  <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                    <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                    <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                    <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-12">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                <div class="footer-widget">
+                  <p class="widget-title">Help menu</p>
+                  <ul class="widget-links pl-0 list-unstyled">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Career</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                <div class="footer-widget">
+                  <p class="widget-title ">Support</p>
+                  <ul class="widget-links pl-0 list-unstyled">
+                    <li><a href="#">contact </a></li>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Privacy and Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                <div class="footer-widget">
+                  <p class="widget-title ">Products</p>
+                  <ul class="widget-links pl-0 list-unstyled">
+                    <li><a href="#">Shades Pro</a></li>
+                    <li><a href="#">Essentiol Blocks</a></li>
+                    <li><a href="#">Avasta Dash</a></li>
+                    <li><a href="#">vApp Landing Page</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Vendor Scripts -->
+  <script src="js/vendor.min.js"></script>
+  <!-- Plugin's Scripts -->
+  <script src="./plugins/fancybox/jquery.fancybox.min.js"></script>
+  <script src="./plugins/nice-select/jquery.nice-select.min.js"></script>
+  <script src="./plugins/aos/aos.min.js"></script>
+  <script src="./plugins/slick/slick.min.js"></script>
+  <script src="https://porjoton.netlify.app/mekanic/js/waypoints.min.js"></script>
+  <script src="./plugins/counter-up/jquery.counterup.min.js"></script>
+  <script src="./plugins/isotope/isotope.pkgd.min.js"></script>
+  <script src="./plugins/isotope/packery.pkgd.min.js"></script>
+  <script src="./plugins/isotope/image.loaded.js"></script>
+  <script src="./plugins/menu/menu.js"></script>
+  <!-- Activation Script -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

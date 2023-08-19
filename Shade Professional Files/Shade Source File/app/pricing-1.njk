@@ -1,0 +1,296 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Pricing 01",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right sign-in-menu-1",
+"absolute_header" : "true",
+container_fluid : false,
+sticky_header :true,
+menu_wrapper_class : "mx-auto",
+hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+<!-- Pricing  Area -->
+
+
+<div class="inner-service-banner">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-7 col-xl-8 col-lg-10 col-md-10">
+                <div class="section-heading-14 text-center">
+                    <h2>Pricing & Plans</h2>
+                    <p>We offer an effective combination of broad customer service expertise and deep product knowledge
+                        to ensure customer experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Price table Area -->
+
+<div class="inner-pricing-area-1">
+  <div class="container">
+    <div class="row justify-content-center inner-pricing-area-1-items">
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-10">
+        <div class="price-card">
+          <div class="price-top-area d-flex justify-content-between">
+              <div class="price-type">
+                <h4>Basic</h4>
+                <span>Most Popular</span>
+              </div>
+              <div class="price-per-month">
+                <h4>$4.95</h4>
+                <span>Per month</span>
+              </div>
+          </div>
+          <div class="price-item-list">
+            <ul class="list-unstyled">
+              <li>Unlimited updates and products <i class="fas fa-check"></i></li>
+              <li>Custom permissions <i class="fas fa-check"></i></li>
+              <li>Custom infrastructure <i class="fas fa-check"></i></li>
+              <li class="del">Custom design and features <i class="fas fa-times"></i></li>
+              <li class="del">Unlimited updates  <i class="fas fa-times"></i></li>
+              <li class="del">Custom infrastructure <i class="fas fa-times"></i></li>
+            </ul>
+          </div>
+          <div class="price-area-btn">
+            <a href="#" class="btn">Get started</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-10">
+        <div class="price-card professional-price-card">
+          <div class="price-top-area d-flex justify-content-between">
+              <div class="price-type">
+                <h4>Professional</h4>
+                <span>Recommanded</span>
+              </div>
+              <div class="price-per-month">
+                <h4>$9.95</h4>
+                <span>Per month</span>
+              </div>
+          </div>
+          <div class="price-item-list">
+            <ul class="list-unstyled">
+              <li>Unlimited updates and products <i class="fas fa-check"></i></li>
+              <li>Custom permissions <i class="fas fa-check"></i></li>
+              <li>Custom infrastructure <i class="fas fa-check"></i></li>
+              <li>Custom design and features <i class="fas fa-check"></i></li>
+              <li>Unlimited updates  <i class="fas fa-check"></i></li>
+              <li class="del">Custom infrastructure <i class="fas fa-times"></i></li>
+            </ul>
+          </div>
+          <div class="price-area-btn">
+            <a href="#" class="btn">Get started</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-10">
+        <div class="price-card">
+          <div class="price-top-area d-flex justify-content-between">
+              <div class="price-type">
+                <h4>Ultimate</h4>
+                <span>Best value</span>
+              </div>
+              <div class="price-per-month">
+                <h4>$12.95</h4>
+                <span>Per month</span>
+              </div>
+          </div>
+          <div class="price-item-list">
+            <ul class="list-unstyled">
+              <li>Unlimited updates and products <i class="fas fa-check"></i></li>
+              <li>Custom permissions <i class="fas fa-check"></i></li>
+              <li>Custom infrastructure <i class="fas fa-check"></i></li>
+              <li>Custom design and features <i class="fas fa-check"></i></li>
+              <li>Unlimited updates  <i class="fas fa-check"></i></li>
+              <li>Custom infrastructure <i class="fas fa-check"></i></li>
+            </ul>
+          </div>
+          <div class="price-area-btn">
+            <a href="#" class="btn">Get started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Feature Area -->
+
+<div class="feature-area-price-1">
+  <div class="container">
+      <div class="row feature-area-price-1-items">
+          <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+              <div class="feature-card-price-1">
+                  <div class="d-flex align-items-center">
+                      <div class="icon">
+                          <img src="image/landing-5/heart1.svg" alt="image">
+                      </div>
+                      <div class="content">
+                          <h4>Best quality</h4>
+                          <p>A team of experts passionate about product management.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+              <div class="feature-card-price-1">
+                  <div class="d-flex align-items-center">
+                      <div class="icon icon-2">
+                          <img src="image/landing-5/zap1.svg" alt="image">
+                      </div>
+                      <div class="content">
+                          <h4>Fastest delivery</h4>
+                          <p>A team of experts passionate about product management.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
+              <div class="feature-card-price-1">
+                  <div class="d-flex align-items-center">
+                      <div class="icon icon-3">
+                          <img src="image/landing-5/headphones1.svg" alt="image">
+                      </div>
+                      <div class="content">
+                          <h4>Great support</h4>
+                          <p>A team of experts passionate about product management.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+            <div class="feature-card-price-1">
+                <div class="d-flex align-items-center">
+                    <div class="icon">
+                        <img src="image/landing-5/heart1.svg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>Best quality</h4>
+                        <p>A team of experts passionate about product management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+            <div class="feature-card-price-1">
+                <div class="d-flex align-items-center">
+                    <div class="icon icon-2">
+                        <img src="image/landing-5/zap1.svg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>Fastest delivery</h4>
+                        <p>A team of experts passionate about product management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
+            <div class="feature-card-price-1">
+                <div class="d-flex align-items-center">
+                    <div class="icon icon-3">
+                        <img src="image/landing-5/headphones1.svg" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>Great support</h4>
+                        <p>A team of experts passionate about product management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-9">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 col-md-8">
+                        <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                        <div class="content">
+                            <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                                top brands as well as for cool startups. </p>
+                        </div>
+
+                        <div class="social-icons">
+                            <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title">Help menu</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Works</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Support</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">contact </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Products</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">Shades Pro</a></li>
+                                <li><a href="#">Essentiol Blocks</a></li>
+                                <li><a href="#">Avasta Dash</a></li>
+                                <li><a href="#">vApp Landing Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

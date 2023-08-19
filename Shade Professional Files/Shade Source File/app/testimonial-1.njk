@@ -1,0 +1,263 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Testimonial-01",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+  "additional_header_class": "site-header--menu-right sign-in-menu-1",
+  "absolute_header" : "true",
+  container_fluid : false,
+  sticky_header :true,
+  menu_wrapper_class : "mx-auto",
+  hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+<!-- Testimonial Area -->
+
+
+<div class="inner-testimonial-banner">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-md-10">
+        <div class="section-heading-14 text-center">
+          <h2>Client Testimonials</h2>
+          <p>Customers loving our work. Don’t believe our words, believe theirs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Content Area 3-->
+
+<div class="content-area-l5-3">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="content-l5-3-content bg-coral">
+                    <h2>“It was super easy to share my unique concept. I got exactly what I ordered. Great service!”</h2>
+                    <div class="identity">
+                        <div class="d-flex">
+                            <div class="identity-left-border">
+                                <span></span>
+                            </div>
+                            <div class="content">
+                                <h6>Jenny Wilson</h6>
+                                <span>St. Celina, Delaware</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                <div class="video-l5-bg background-property position-relative" style="background: url(./image/landing-5/video-bg.png);">
+                    <div class="video-area-l5">
+                        <a data-fancybox="" href="https://www.youtube.com/embed/9yc1lfFZX-I"><i
+                            class="fas fa-play font-size-7"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Clients Area -->
+
+<div class="clients-area-l8">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-6 col-lg-7 col-lg-8 col-md-11">
+                <div class="section__heading text-center">
+                    <h2>We help people solving their finance problems smartly.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center clients-l8-items">
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                <div class="client-l8-card">
+                    <div class="image">
+                        <img src="image/landing-8/testimonial-2.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>“The best in town”</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin. Orci nullam vitae amet ullamcorper scelerisque</p>
+                    </div>
+                    <div class="identity">
+                        <h6>Emerson Saris</h6>
+                        <span>58, California, USA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="client-l8-card">
+                    <div class="image">
+                        <img src="image/landing-8/testimonial-1.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>“Finance is now easy!”</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin. Orci nullam vitae amet ullamcorper scelerisque</p>
+                    </div>
+                    <div class="identity">
+                        <h6>Ashlynn Baptista</h6>
+                        <span>52, New York, USA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+                <div class="client-l8-card">
+                    <div class="image">
+                        <img src="image/landing-8/testimonial-3.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>“They made it easy”</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin. Orci nullam vitae amet ullamcorper scelerisque</p>
+                    </div>
+                    <div class="identity">
+                        <h6>Davis Ekstrom Bothman</h6>
+                        <span>29, London, UK</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                <div class="client-l8-card">
+                    <div class="image">
+                        <img src="image/landing-8/testimonial-4.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>“The best in town”</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin. Orci nullam vitae amet ullamcorper scelerisque</p>
+                    </div>
+                    <div class="identity">
+                        <h6>Emerson Saris</h6>
+                        <span>58, California, USA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="client-l8-card">
+                    <div class="image">
+                        <img src="image/landing-8/testimonial-5.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>“Finance is now easy!”</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin. Orci nullam vitae amet ullamcorper scelerisque</p>
+                    </div>
+                    <div class="identity">
+                        <h6>Ashlynn Baptista</h6>
+                        <span>52, New York, USA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-10" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
+                <div class="client-l8-card">
+                    <div class="image">
+                        <img src="image/landing-8/testimonial-6.png" alt="image">
+                    </div>
+                    <div class="content">
+                        <h4>“They made it easy”</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sed sit ultrices et sed metus sollicitudin. Orci nullam vitae amet ullamcorper scelerisque</p>
+                    </div>
+                    <div class="identity">
+                        <h6>Davis Ekstrom Bothman</h6>
+                        <span>29, London, UK</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-5 col-sm-9">
+              <div class="row">
+                  <div class="col-xl-9 col-lg-10 col-md-8">
+                      <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                      <div class="content">
+                          <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                              top brands as well as for cool startups. </p>
+                      </div>
+
+                      <div class="social-icons">
+                          <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                  class="fab fa-twitter"></i></a></li>
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                          class="fab fa-facebook-f"></i></a></li>
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                          class="fab fa-google"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-7 col-md-12">
+              <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                      <div class="footer-widget">
+                          <p class="widget-title">Help menu</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">About</a></li>
+                              <li><a href="#">Features</a></li>
+                              <li><a href="#">Works</a></li>
+                              <li><a href="#">Career</a></li>
+                          </ul>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                      <div class="footer-widget">
+                          <p class="widget-title ">Support</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">contact </a></li>
+                              <li><a href="#">Help & Support</a></li>
+                              <li><a href="#">Privacy and Policy</a></li>
+                              <li><a href="#">Terms & Conditions</a></li>
+                          </ul>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                      <div class="footer-widget">
+                          <p class="widget-title ">Products</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">Shades Pro</a></li>
+                              <li><a href="#">Essentiol Blocks</a></li>
+                              <li><a href="#">Avasta Dash</a></li>
+                              <li><a href="#">vApp Landing Page</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+{% endblock %}

@@ -1,0 +1,291 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Portfolio Details 03",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right sign-in-menu-1",
+"absolute_header" : "true",
+container_fluid : false,
+sticky_header :true,
+menu_wrapper_class : "mx-auto",
+hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+
+<!-- Portfolio  Area -->
+
+<div class="portfolio-details-area-3">
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-xl-10 col-lg-10 col-md-10">
+              <div class="product-details-slider">
+                <div class="single-slide focus-reset">
+                  <img class="w-100" src="./image/portfolio-product/product-1.png" alt="image">
+                </div>
+                <div class="single-slide focus-reset">
+                    <img class="w-100" src="./image/portfolio-product/product-1.png" alt="image">
+                </div>
+                <div class="single-slide focus-reset">
+                    <img class="w-100" src="./image/portfolio-product/product-1.png" alt="image">
+                </div>
+                <div class="single-slide focus-reset">
+                    <img class="w-100" src="./image/portfolio-product/product-1.png" alt="image">
+                </div>
+             
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2">
+                <div class="product-details-vertical-slider">
+                  <div class="single-slide focus-reset">
+                    <img class="w-100" src="./image/portfolio-product/slider-small-1.png" alt="image">
+                  </div>
+                  <div class="single-slide focus-reset">
+                    <img class="w-100" src="./image/portfolio-product/slider-small-2.png" alt="image">
+                  </div>
+                  <div class="single-slide focus-reset">
+                    <img class="w-100" src="./image/portfolio-product/slider-small-3.png" alt="image">
+                  </div>
+                  <div class="single-slide focus-reset">
+                    <img class="w-100" src="./image/portfolio-product/slider-small-2.png" alt="image">
+                  </div>
+                
+                </div>
+              </div>
+          </div>
+    </div>
+</div>
+
+<div class="project-information-pd-3">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-7 col-md-10">
+                <div class="content">
+                    <h2>Project information</h2>
+                    <p>NYmag only uses the most trending layouts and mockups for its eyecathing and current world news showcase. But with a constantly growing product palette, it was important to establish a strategic and aesthetic focus for the brand.</p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+            <div class="offset-xl-1 col-xl-4 col-lg-5 col-md-5">
+                <div class="project-details">
+                    <ul class="list-unstyled">
+                        <li><strong>Project Name:</strong> <span>Systemio</span></li>
+                        <li><strong>Client:</strong> <span>Minimalist International</span></li>
+                        <li><strong>Category:</strong> <span>Marketing, SEO</span></li>
+                    </ul>
+                    <a href="#" class="btn">Visit website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Project Brief Area-->
+
+<div class="project-brief-area">
+    <div class="container">
+        <div class="row project-brief-area-items justify-content-center">
+            <div class="col-lg-5 col-md-6">
+                <div class="content">
+                    <h2>Project brief</h2>
+                    <p>Holistic brand redesign focusing product design, interface design, studio photograph style, icon design, editorial design, web design & motion design.</p>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-6">
+                <div class="content">
+                    <h2>Our Process</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="row  justify-content-center">
+            <div class="col-lg-3 col-md-6">
+                <div class="product-image">
+                    <img class="w-100" src="image/portfolio/brief-1.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 order-lg-1 order-1">
+                <div class="product-image">
+                    <img class="w-100" src="image/portfolio/brief-2.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 order-lg-1 order-0">
+                <div class="product-image">
+                    <img class="w-100" src="image/portfolio/brief-3.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Content Area 3-->
+
+<div class="content-area-l5-3 client-feed-back-port-3">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="heading text-center">
+                    <h2>Client feedback</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                <div class="content-l5-3-content">
+                    <h2>“It was super easy to share my unique concept. I got exactly what I ordered. Great service!”</h2>
+                    <div class="identity">
+                        <div class="d-flex">
+                            <div class="identity-left-border">
+                                <span></span>
+                            </div>
+                            <div class="content">
+                                <h6>Jenny Wilson</h6>
+                                <span>St. Celina, Delaware</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000">
+                <div class="video-l5-bg background-property position-relative" style="background: url(./image/landing-5/video-bg.png);">
+                    <div class="video-area-l5">
+                        <a data-fancybox="" href="https://www.youtube.com/embed/9yc1lfFZX-I"><i
+                            class="fas fa-play font-size-7"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ 
+<!--Similar project Area-->
+
+<div class="similar-project-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-7 col-lg-9 col-md-10">
+                <div class="section-heading-14 text-center">
+                    <h2>Similar projects</h2>
+                    <p>We are an industry-leading company that values honesty, integrity, and efficiency. Building quality products and caring.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center similar-project-items">
+            <div class="col-lg-4 col-md-6">
+                <div class="similar-project-image">
+                    <img class="w-100" src="image/portfolio/portfolio-1.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="similar-project-image">
+                    <img class="w-100" src="image/portfolio/portfolio-2.png" alt="image">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="similar-project-image">
+                    <img class="w-100" src="image/portfolio/portfolio-3.png" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-9">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 col-md-8">
+                        <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                        <div class="content">
+                            <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                                top brands as well as for cool startups. </p>
+                        </div>
+
+                        <div class="social-icons">
+                            <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title">Help menu</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Works</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Support</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">contact </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Products</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">Shades Pro</a></li>
+                                <li><a href="#">Essentiol Blocks</a></li>
+                                <li><a href="#">Avasta Dash</a></li>
+                                <li><a href="#">vApp Landing Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

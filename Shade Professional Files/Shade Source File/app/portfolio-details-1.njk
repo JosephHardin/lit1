@@ -1,0 +1,133 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Portfolio Details 01",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right sign-in-menu-1",
+"absolute_header" : "true",
+container_fluid : false,
+sticky_header :true,
+menu_wrapper_class : "mx-auto",
+hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+
+<!-- Portfolio  Area -->
+
+<div class="portfolio-details-area-1">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-7">
+        <div class="portfolio-details-1-image">
+          <img class="w-100" src="image/portfolio/portfolio-21.png" alt="image">
+        </div>
+      </div>
+      <div class="offset-lg-1 col-lg-4 col-md-8">
+        <div class="port-details-1-content">
+          <h2>PROJECT INFORMATION</h2>
+          <p>Council are celebrating the incredible achievement of the Companies and Stakeholders. Due to BIM’s fast invasion in all over the world specially in the North America.</p>
+          <div class="project-details">
+            <ul class="list-unstyled">
+              <li><strong>Project Name:</strong> <span>Systemio</span></li>
+              <li><strong>Client:</strong> <span>Minimalist International</span></li>
+              <li><strong>Fishing Date:</strong> <span>01 january, 2021</span></li>
+              <li><strong>Duration:</strong> <span>2 weeks</span></li>
+              <li><strong>Category:</strong> <span>Marketing, SEO</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-9">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 col-md-8">
+                        <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                        <div class="content">
+                            <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                                top brands as well as for cool startups. </p>
+                        </div>
+
+                        <div class="social-icons">
+                            <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title">Help menu</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Works</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Support</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">contact </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Products</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">Shades Pro</a></li>
+                                <li><a href="#">Essentiol Blocks</a></li>
+                                <li><a href="#">Avasta Dash</a></li>
+                                <li><a href="#">vApp Landing Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

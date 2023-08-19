@@ -1,0 +1,386 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Pricing 02",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right sign-in-menu-1",
+"absolute_header" : "true",
+container_fluid : false,
+sticky_header :true,
+menu_wrapper_class : "mx-auto",
+hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+<!-- Pricing  Area -->
+
+
+<div class="inner-service-banner">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-7 col-xl-8 col-lg-10 col-md-10">
+                <div class="section-heading-14 text-center">
+                    <h2>Pricing & Plans</h2>
+                    <p>We offer an effective combination of broad customer service expertise and deep product knowledge
+                        to ensure customer experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Price table Area -->
+
+<div class="inner-price-table-2">
+    <div class="container" id="table-price-value" data-pricing-dynamic="" data-value-active="monthly">
+      <div class="row justify-content-center">
+        <div class="col-xl-4 col-lg-5">
+          <div class="text-center">
+            <div class="toggle-btn d-inline-block">
+              <a class="btn-toggle btn-toggle-2 btn-toggle-8 d-flex mx-6 price-deck-trigger" data-pricing-trigger="" data-target="#table-price-value" href="javascript:">
+                <span class="round"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="800" data-aos-once="true">
+          <div class="price_info_two">
+            <div class="price_head">
+              <div class="p_head blank-area">
+              </div>
+              <div class="p_head">
+                <h5>Free</h5>
+                <h2><span class="dynamic-value">$</span><span class="dynamic-value" data-active="15" data-monthly="0" data-yearly="50"></span></h2>
+                <p>Per month </p>
+              </div>
+              <div class="p_head">
+                <h5>Team</h5>
+                <h2><span class="dynamic-value">$</span><span class="dynamic-value" data-active="15" data-monthly="99" data-yearly="120"></span></h2>
+                <p>Per month </p>
+              </div>
+              <div class="p_head">
+                <h5>Popular</h5>
+                <h2><span class="dynamic-value">$</span><span class="dynamic-value" data-active="15" data-monthly="150" data-yearly="200"></span></h2>
+                <p>Per month </p>
+              </div>
+              <div class="p_head">
+                <h5>Enterprise</h5>
+                <h2><span class="dynamic-value">$</span><span class="dynamic-value" data-active="15" data-monthly="499" data-yearly="550"></span></h2>
+                <p>Per month </p>
+              </div>
+            </div>
+            <div class="price_body">
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand"> Website nuumber
+                  </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">01</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check">10</span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check">Unlimited</span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check">Unlimited</span>
+                </div>
+              </div>
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand"> Server storger </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">100GB</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check">100GB</span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check">Unlimited</span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check">Unlimited</span>
+                </div>
+              </div>
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand">Database </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">10</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check">15</span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check">Unlimited</span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check">Unlimited</span>
+                </div>
+              </div>
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand">Unmetered bandwidth
+                  </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+              </div>
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand"> SSD disk </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+              </div>
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand"> VCPUS Fontworld
+                  </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+              </div>
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand"> WordPress install
+                  </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+              </div>
+              <div class="pr_list">
+                <div class="price_item">
+                  <h5 class="pr_title" data-toggle="tooltip" data-placement="top" title="" data-original-title="Save time by using keyboard shortcuts all across SaasLand"> Server speed </h5>
+                </div>
+                <div class="price_item" data-title="Free">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Team">
+                  <span class="check">-</span>
+                </div>
+                <div class="price_item" data-title="Popular">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+                <div class="price_item" data-title="Enterprise">
+                  <span class="check"><i class="fas fa fa-check"></i></span>
+                </div>
+              </div>
+              <div class="pr_list pricing-get-strated-btn">
+                <div class="price_item"></div>
+                <div class="price_item"> <a href="#" class="price_btn btn_hover"> Get started <i class="fas fa-arrow-right"></i></a></div>
+                <div class="price_item"> <a href="#" class="price_btn btn_hover"> Get started <i class="fas fa-arrow-right"></i></a></div>
+                <div class="price_item price-get-started-btn-3"> <a href="#" class="price_btn btn_hover"> Get started <i class="fas fa-arrow-right"></i></a></div>
+                <div class="price_item"> <a href="#" class="price_btn btn_hover"> Get started <i class="fas fa-arrow-right"></i></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- FAQ Area -->
+
+<div class="price-2-faq-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading-14 text-center">
+                    <h2>Frequently Asked Question</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row price-2-faq-area-items justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-9 col-sm-10">
+                <div class="content">
+                  <div class="question-item">
+                    <h4>What’s gonna be your question?</h4>
+                    <p>Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-9 col-sm-10">
+                <div class="content">
+                  <div class="question-item">
+                    <h4>What’s gonna be your question?</h4>
+                    <p>Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-9 col-sm-10">
+                <div class="content">
+                  <div class="question-item">
+                    <h4>What’s gonna be your question?</h4>
+                    <p>Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-9 col-sm-10">
+                <div class="content">
+                  <div class="question-item">
+                    <h4>What’s gonna be your question?</h4>
+                    <p>Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-9 col-sm-10">
+                <div class="content">
+                  <div class="question-item">
+                    <h4>What’s gonna be your question?</h4>
+                    <p>Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-md-9 col-sm-10">
+                <div class="content">
+                  <div class="question-item">
+                    <h4>What’s gonna be your question?</h4>
+                    <p>Create custom landing pages with Omega that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website.</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="price-2-faq-area-bottom text-center">
+                    <p>Didn’t find your answer? <a href="#">Contact us here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-9">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 col-md-8">
+                        <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                        <div class="content">
+                            <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                                top brands as well as for cool startups. </p>
+                        </div>
+
+                        <div class="social-icons">
+                            <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title">Help menu</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Works</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Support</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">contact </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Products</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">Shades Pro</a></li>
+                                <li><a href="#">Essentiol Blocks</a></li>
+                                <li><a href="#">Avasta Dash</a></li>
+                                <li><a href="#">vApp Landing Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

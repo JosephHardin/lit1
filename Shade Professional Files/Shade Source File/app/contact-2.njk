@@ -1,0 +1,222 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Contact 02",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right sign-in-menu-1",
+"absolute_header" : "true",
+container_fluid : false,
+sticky_header :true,
+menu_wrapper_class : "mx-auto",
+hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+<!-- Contact  Area -->
+
+
+<div class="inner-pages-banner">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-10">
+                <div class="section-heading-14 text-center">
+                    <h2>Contact Us</h2>
+                    <p>We are an industry-leading company that values honesty, integrity, and efficiency. Building
+                        quality products and caring.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact form Area -->
+
+<div class="inner-contact-area-2 cta-area-l9 position-relative background-property"
+    style="background: url(./image/contact/contact-bg-2.png);">
+    <div class="container">
+        <div class="row justify-content-lg-end justify-content-center">
+            <div class="col-xxl-4 col-xl-5 col-lg-6 col-md-9" data-aos="fade-up" data-aos-delay="500"
+                data-aos-duration="1000">
+                <div class="cta-form-area-l9">
+                    <div class="icon-area d-flex justify-content-center text-center">
+                        <img src="image/landing-9/chat-round-content.svg" alt="icon">
+                    </div>
+                    <div class="content text-center">
+                        <h4>Get in touch</h4>
+                        <p>Velit tempor, aliquam vel mauris duis rhoncus maecenas Sed porttitor lectus.</p>
+                    </div>
+                    <form action="#" class="cta-form-l9">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" class="form-control"
+                                        placeholder="Your name*">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        placeholder="Email address*">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <input type="text" name="date" id="date" class="form-control" placeholder="Subject">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <textarea type="text" name="message" id="message" class="form-control"
+                                        placeholder="Your message"></textarea>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn focus-reset">Submit</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-curve-shape-l9 d-none d-lg-block">
+        <img src="image/landing-9/cta-curve.svg" alt="curve">
+    </div>
+</div>
+
+
+<div class="inner-contact-2-items-area">
+    <div class="container">
+        <div class="row justify-content-center inner-contact-2-items-area-items">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card-area d-xs-flex">
+                    <div class="icon-box">
+                        <img src="image/contact/fluent_location-48-filled.png">
+                    </div>
+                    <div class="content-box">
+                        <h4>Visit Us</h4>
+                        <p>34 Madison Street,<br>
+                            NY, USA 10005</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card-area d-xs-flex">
+                    <div class="icon-box">
+                        <img src="image/contact/ic_round-call.png">
+                    </div>
+                    <div class="content-box">
+                        <h4>Call us</h4>
+                        <p>+1-492-4918-395<br>
+                            +14-394-409-591</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card-area d-xs-flex">
+                    <div class="icon-box">
+                        <img src="image/contact/dashicons_email-alt.png">
+                    </div>
+                    <div class="content-box">
+                        <h4>Email us</h4>
+                        <p>info@mail.com<br>
+                            support@mail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-9">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 col-md-8">
+                        <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                        <div class="content">
+                            <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                                top brands as well as for cool startups. </p>
+                        </div>
+
+                        <div class="social-icons">
+                            <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title">Help menu</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Works</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Support</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">contact </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Products</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">Shades Pro</a></li>
+                                <li><a href="#">Essentiol Blocks</a></li>
+                                <li><a href="#">Avasta Dash</a></li>
+                                <li><a href="#">vApp Landing Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

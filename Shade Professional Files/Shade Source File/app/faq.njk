@@ -1,0 +1,244 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "FAQ",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+  "additional_header_class": "site-header--menu-right sign-in-menu-1",
+  "absolute_header" : "true",
+  container_fluid : false,
+  sticky_header :false,
+  menu_wrapper_class : "mx-auto",
+  hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+<!-- FAQ Area -->
+
+
+<div class="faq-main-banner">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xxl-7 col-xl-9 col-lg-10 col-md-12">
+        <div class="section-heading-14 text-center">
+            <h2>Frequently Asked Question</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Content Area -->
+
+<div class="faq-main-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="faq-main-tab-area sticky">
+            <ul class="list-unstyled">
+              <li class="active"><a href="#general">General</a></li>
+              <li><a href="#account">Accounts</a></li>
+              <li><a href="#sell">Sells</a></li>
+              <li><a href="#support">Support License</a></li>
+              <li><a href="#refund">Refund</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-8 col-md-10 faq-single-all-items">
+          <div class="faq-main-area-single" id="general">
+            <h2>General</h2>
+            <ul class="accordion p-0">
+              <li class="active">
+                <a class="active">Can I use appex for my clients?</a>
+                <p style="display: block;">Create custom landing pages with appex that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website. Totally clean coded easy to maintain.
+                </p>
+              </li>
+              <li>
+                <a>Do I get free updates?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Does it work with WordPress?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Will you provide support?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Does appex offer XD &amp; Sketch file ?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="faq-main-area-single" id="account">
+            <h2>Accounts</h2>
+            <ul class="accordion p-0">
+              <li>
+                <a>Do I get free updates?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Does it work with WordPress?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Will you provide support?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Does appex offer XD &amp; Sketch file ?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="faq-main-area-single" id="sell">
+            <h2>Sales</h2>
+            <ul class="accordion p-0">
+              <li>
+                <a>Do I get free updates?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Does it work with WordPress?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="faq-main-area-single" id="support">
+            <h2>Support License</h2>
+            <ul class="accordion p-0">
+              <li>
+                <a>Do I get free updates?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Does it work with WordPress?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+              <li>
+                <a>Will you provide support?</a>
+                <p>Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="faq-main-area-single" id="refund">
+            <h2>Refund</h2>
+            <ul class="accordion p-0">
+              <li>
+                <a>Do you offer refunds?</a>
+                <p>Create custom landing pages with appex that converts more visitors than any website. With lots of unique blocks, you can easily build a page without any design or custom coding. with Omega that converts more visitors than any website. Totally clean coded easy to maintain.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-5 col-sm-9">
+              <div class="row">
+                  <div class="col-xl-9 col-lg-10 col-md-8">
+                      <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                      <div class="content">
+                          <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                              top brands as well as for cool startups. </p>
+                      </div>
+
+                      <div class="social-icons">
+                          <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                  class="fab fa-twitter"></i></a></li>
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                          class="fab fa-facebook-f"></i></a></li>
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                          class="fab fa-google"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-7 col-md-12">
+              <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                      <div class="footer-widget">
+                          <p class="widget-title">Help menu</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">About</a></li>
+                              <li><a href="#">Features</a></li>
+                              <li><a href="#">Works</a></li>
+                              <li><a href="#">Career</a></li>
+                          </ul>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                      <div class="footer-widget">
+                          <p class="widget-title ">Support</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">contact </a></li>
+                              <li><a href="#">Help & Support</a></li>
+                              <li><a href="#">Privacy and Policy</a></li>
+                              <li><a href="#">Terms & Conditions</a></li>
+                          </ul>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                      <div class="footer-widget">
+                          <p class="widget-title ">Products</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">Shades Pro</a></li>
+                              <li><a href="#">Essentiol Blocks</a></li>
+                              <li><a href="#">Avasta Dash</a></li>
+                              <li><a href="#">vApp Landing Page</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+{% endblock %}

@@ -1,0 +1,345 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "Career",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right sign-in-menu-1",
+"absolute_header" : "true",
+container_fluid : false,
+sticky_header :true,
+menu_wrapper_class : "mx-auto",
+hideMegamenu : false,
+header_button : "true",
+additional_button_classes : "sign-in-header-btn-1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "download-trail-btn btn focus-reset",
+header_button_text : "Get Whiter"
+
+})}}
+
+
+<!-- Service Area -->
+
+
+<div class="inner-career-banner">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xxl-7 col-xl-8 col-lg-10 col-md-10">
+                <div class="section-heading-14 text-center">
+                    <h2>Career & opportunities</h2>
+                    <p>We offer an effective combination of broad customer service expertise and deep product knowledge
+                        to ensure customer experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content Area-1  -->
+
+<div class="content-are-l2-1">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-xxl-5 col-xl-6 col-lg-7 col-md-9" data-aos="fade-right" data-aos-delay="300"
+                data-aos-duration="1000">
+                <div class="content text-center text-xl-start">
+                    <h2>Build your career in our community</h2>
+                    <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat
+                        duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    <div class="check-lis-btn-l2">
+                        <a href="#" class="btn btn-style-03 focus-reset">Check Listing</a>
+                    </div>
+                </div>
+            </div>
+            <div class="offset-xxl-1 col-xxl-6 col-xl-6">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        <div class="content-l2-2-image-1 image-hover-style-01 overflow-hidden">
+                            <img class="w-100" src="image/landing-2/people-2.png" alt="image">
+                            <div class="logo-1">
+                                <img src="image/landing-2/amazon.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="content-l2-2-image-2 overflow-hidden image-hover-style-01" data-aos="fade-left"
+                            data-aos-delay="500" data-aos-duration="1000">
+                            <img class="w-100" src="image/landing-2/people-1.png" alt="image">
+                            <div class="logo-2">
+                                <img src="image/landing-2/airbnb.png" alt="image">
+                            </div>
+                        </div>
+                        <div class="content-l2-2-image-3 overflow-hidden image-hover-style-01" data-aos="fade-left"
+                            data-aos-delay="700" data-aos-duration="1000">
+                            <img class="w-100" src="image/landing-2/people-3.png" alt="image">
+                            <div class="logo-3">
+                                <img src="image/landing-2/google.png" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Feature  Area -->
+
+
+
+<div class="inner-feature-area-2">
+    <div class="container">
+        <div class="footer-middle-carrer"></div>
+      <div class="row inner-feature-area-2-items justify-content-center">
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-9 col-12 " data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+          <div class="widget d-xs-flex">
+            <div class="widget-icon">
+              <span><i class="fas fa-briefcase"></i></span>
+            </div>
+            <div class="widget-text">
+              <h4>Work from anywhere</h4>
+              <p>A team of experts passionate about product management.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-9 col-12 " data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+          <div class="widget d-xs-flex">
+            <div class="widget-icon widget-icon-2">
+              <span><i class="fas fa-hourglass-half"></i></span>
+            </div>
+            <div class="widget-text">
+              <h4>Flexible hours</h4>
+              <p>A team of experts passionate about product management.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-9 col-12 " data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+          <div class="widget d-xs-flex">
+            <div class="widget-icon widget-icon-3">
+              <span><i class="fas fa-suitcase-rolling"></i></span>
+            </div>
+            <div class="widget-text">
+              <h4>Work and travel</h4>
+              <p>A team of experts passionate about product management.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-9 col-12 " data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+          <div class="widget d-xs-flex">
+            <div class="widget-icon widget-icon-4">
+              <span><i class="fas fa-baby"></i></span>
+            </div>
+            <div class="widget-text">
+              <h4>Paid parental leave</h4>
+              <p>A team of experts passionate about product management.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-9 col-12 " data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+          <div class="widget d-xs-flex">
+            <div class="widget-icon widget-icon-5">
+              <span><i class="fas fa-gift"></i></span>
+            </div>
+            <div class="widget-text">
+              <h4>Yearly bonuses</h4>
+              <p>A team of experts passionate about product management.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-9 col-12 " data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
+          <div class="widget d-xs-flex">
+            <div class="widget-icon widget-icon-6">
+              <span><i class="fas fa-dollar-sign"></i></span>
+            </div>
+            <div class="widget-text">
+              <h4>Smart salary</h4>
+              <p>A team of experts passionate about product management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Feature Job Area -->
+
+<div class="feature-job-area bg-athensgray">
+    <div class="container">
+        <div class="row justify-content-lg-between justify-content-center align-items-center text-center text-lg-start">
+            <div class="col-lg-8 col-md-8">
+                <div class="section__heading">
+                    <h2>Our current vacancies</h2>
+                    <p>Check our featured jobs from popular companies. Start applying now. </p>
+                </div>
+            </div>
+        </div>
+        <div class="row feature-job-items justify-content-center">
+            {% set jobs = [
+            {
+            "location":"New York, USA",
+            "title":"Full-Stuck Web Developer",
+            "company": "Chorocon Ltd",
+            "week": "1 Week ago"
+
+            },
+            {
+            "location":"Singapore",
+            "title":"Senior Project Manager",
+            "company": "Google Inc",
+            "week": "2 Week ago"
+
+            },
+            {
+            "location":"Remote",
+            "title":"Junior Graphic Designer",
+            "company": "Canava",
+            "week": "3 Week ago"
+
+            }, {
+            "location":"Singapore",
+            "title":"Senior Project Manager",
+            "company": "Google Inc",
+            "week": "2 Week ago"
+
+            },
+            {
+            "location":"Singapore",
+            "title":"Junior Graphic Designer",
+            "company": "Canava",
+            "week": "2 Week ago"
+
+            },
+            {
+            "location":"Singapore",
+            "title":"Full-Stact Web Developer",
+            "company": "Chorocon Ltd.",
+            "week": "1 Week ago"
+
+            }
+
+
+            ]
+            %}
+            {% for item in jobs %}
+            <div class="col-xl-4 col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <div class="feature-job-box h-100">
+                    <div class="location d-flex align-items-center">
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="content">
+                            <span>{{item.location}}</span>
+                        </div>
+                    </div>
+                    <h4>{{item.title}}</h4>
+                    <p>By <span> {{item.company}}</span></p>
+                    <div class="time-apply-area">
+                        <div class="d-xs-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                                <div class="icon">
+                                    <i class="fas fa-calendar"></i>
+                                </div>
+                                <div class="content">
+                                    <span>{{item.week}}</span>
+                                </div>
+                            </div>
+                            <div class="apply-now-btn-fj">
+                                <a href="#" class="btn btn-style-03 focus-reset">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<!-- Case-study Studies Area -->
+
+
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-sm-9">
+                <div class="row">
+                    <div class="col-xl-9 col-lg-10 col-md-8">
+                        <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                        <div class="content">
+                            <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                                top brands as well as for cool startups. </p>
+                        </div>
+
+                        <div class="social-icons">
+                            <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                            class="fab fa-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-12">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title">Help menu</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Works</a></li>
+                                <li><a href="#">Career</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Support</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">contact </a></li>
+                                <li><a href="#">Help & Support</a></li>
+                                <li><a href="#">Privacy and Policy</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="footer-widget">
+                            <p class="widget-title ">Products</p>
+                            <ul class="widget-links pl-0 list-unstyled">
+                                <li><a href="#">Shades Pro</a></li>
+                                <li><a href="#">Essentiol Blocks</a></li>
+                                <li><a href="#">Avasta Dash</a></li>
+                                <li><a href="#">vApp Landing Page</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}

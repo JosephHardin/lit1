@@ -1,0 +1,131 @@
+{% extends "template.njk" %}
+
+{#
+<!-- Page Info Input Here --> #}
+
+{% set PAGE_INFO = {
+page_title : "404 Error!",
+page_wrapper_class : ""
+
+} %}
+{% import 'components/Header/_header.njk' as Header %}
+
+{% block main %}
+<!-- Site Header -->
+{{Header.render({
+"additional_header_class": "site-header--menu-right landing-1-menu",
+"absolute_header" : "true",
+container_fluid : false,
+header_button : true,
+sticky_header :true,
+hideMegamenu : false,
+menu_wrapper_class : "mx-auto",
+additional_button_classes : "header-btn-l1 ms-auto d-none d-xs-inline-flex",
+header_button_class : "btn log-in-btn btn-style-02 focus-reset",
+header_button_text : "Get Whiter"
+})}}
+
+
+<!-- 404 page Area -->
+
+<div class="error-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10">
+        <div class="error-page-content text-center">
+          <img class="w-100" src="./image/sign-in/404.png" alt="image">
+          <h2>404 Error!</h2>
+          <p>The page you are looking for is not available or doesn’t belong to this website!</p>
+          <div class="back-to-btn">
+            <a href="#"><button class="btn focus-reset">Go back to Home</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Footer Area-->
+
+<footer class="footer-sign-in-1">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-5 col-sm-9">
+              <div class="row">
+                  <div class="col-xl-9 col-lg-10 col-md-8">
+                      <a href="#"><img src="./image/logos/logo-paste.png" alt="" class="footer-logo"></a>
+                      <div class="content">
+                          <p>Big, small, online, offline, local. Size doesn't matter. We work on diverse projects for
+                              top brands as well as for cool startups. </p>
+                      </div>
+
+                      <div class="social-icons">
+                          <ul class="pl-0 list-unstyled d-flex align-items-end ">
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                  class="fab fa-twitter"></i></a></li>
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                          class="fab fa-facebook-f"></i></a></li>
+                              <li class="d-flex flex-column justify-content-center"><a href="#"><i
+                                          class="fab fa-google"></i></a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-7 col-md-12">
+              <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                      <div class="footer-widget">
+                          <p class="widget-title">Help menu</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">About</a></li>
+                              <li><a href="#">Features</a></li>
+                              <li><a href="#">Works</a></li>
+                              <li><a href="#">Career</a></li>
+                          </ul>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-4 col-xs-6 pl-md-9 pl-6">
+                      <div class="footer-widget">
+                          <p class="widget-title ">Support</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">contact </a></li>
+                              <li><a href="#">Help & Support</a></li>
+                              <li><a href="#">Privacy and Policy</a></li>
+                              <li><a href="#">Terms & Conditions</a></li>
+                          </ul>
+
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                      <div class="footer-widget">
+                          <p class="widget-title ">Products</p>
+                          <ul class="widget-links pl-0 list-unstyled">
+                              <li><a href="#">Shades Pro</a></li>
+                              <li><a href="#">Essentiol Blocks</a></li>
+                              <li><a href="#">Avasta Dash</a></li>
+                              <li><a href="#">vApp Landing Page</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+{% endblock %}
