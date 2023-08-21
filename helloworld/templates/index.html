@@ -2,32 +2,95 @@
 <html lang="en">
 {% load staticfiles %}
 <head>
-    <meta charset="utf-8">
-    <title>Joe Hardin's web application</title>
-    <meta name="description" content="" />
-    <link href="{% static "helloworld/css/styles.css" %}" rel="stylesheet">
-    <link href="{% static "helloworld/css/gradients.css" %}" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% block PageTitle %}
+  {% endblock %}
+  <link rel="shortcut icon" href="../static/Shade/image/favicon.png" type="image/x-icon">
+  <!-- Bootstrap , fonts & icons  -->
+  <link rel="stylesheet" href="../static/Shade/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/Shade/fonts/icon-font/css/style.css">
+  <link rel="stylesheet" href="../static/Shade/fonts/typography-font/typo.css">
+  <link rel="stylesheet" href="../static/Shade/fonts/fontawesome-5/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Plugin'stylesheets  -->
+  <link rel="stylesheet" href="../static/Shade/plugins/aos/aos.min.css">
+  <link rel="stylesheet" href="../static/Shade/plugins/fancybox/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../static/Shade/plugins/nice-select/nice-select.min.css">
+  <link rel="stylesheet" href="../static/Shade/plugins/slick/slick.min.css">
+  <!-- Vendor stylesheets  -->
+  <link rel="stylesheet" href="../static/Shade/css/main.css">
 </head>
 
-<body class="">
-    <div class="wrapper">
+ <header class="site-header site-header--menu-left landing-2-menu site-header--absolute site-header--sticky">
+      <div class="container">
+        <nav class="navbar site-navbar">
+          <div class="menu-block-wrapper">
+            <div class="menu-overlay"></div>
+            <nav class="menu-block" id="append-menu-header">
+              <div class="mobile-menu-head">
+                <div class="go-back">
+                  <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="site-menu-main">
+
+                <li class="nav-item nav-item-has-children">
+                  <a href="#" class="nav-link-item drop-trigger">Personal Links<i class="fas fa-angle-down"></i>
+                  </a>
+                  <ul class="sub-menu" id="submenu-9">
+                    <li class="sub-menu--item">
+                      <a href="https://www.linkedin.com/in/joseph-hardin-59b08679/">LinkedIn</a>
+                    </li>
+                    <li class="sub-menu--item">
+                      <a href="https://github.com/JosephHardin/">GitHub</a>
+                    </li>
+                    <li class="sub-menu--item">
+                      <a href="https://github.com/JosephHardin/">Kaggle</a>
+                    </li>
 
 
-        <header>
-            <nav class="website-nav">
-                <ul>
-                    <li><a class="home-link" href="https://joehardin.com/">Home</a></li>
-                    <li><a href="https://www.linkedin.com/in/joseph-hardin-59b08679/">LinkedIn</a></li>
-                    <li><a href="https://github.com/JosephHardin">GitHub</a></li>
-                    <li><a href="https://www.kaggle.com/joehardin369">Kaggle</a></li>
-                    <li><a href="https://www.kaggle.com/joehardin369">Literature Explorer</a></li>
-                </ul>
+                  </ul>
+                </li>
 
+
+
+
+
+                <li class="nav-item">
+                  <a href="/litexplorer" class="nav-link-item">Literature Explorer</a>
+                </li>
+                <li class="nav-item">
+                  <a href="http://www.google.com" class="nav-link-item">Google</a>
+                </li>
+              </ul>
             </nav>
-
-
-
-    </div>
+          </div>
+          <div class="header-btns  header-btn-l2 ms-auto d-none d-xs-inline-flex align-items-center">
+            <a class="btn sign-in-btn focus-reset" href="#">
+              Sign in
+            </a>
+            <a class="btn btn-style-03 register-btn focus-reset" href="#">
+              Register
+            </a>
+          </div>
+          <!-- mobile menu trigger -->
+          <div class="mobile-menu-trigger">
+            <span></span>
+          </div>
+          <!--/.Mobile Menu Hamburger Ends-->
+        </nav>
+      </div>
+    </header>
+    <!-- navbar- -->
 
     {% block mytest %}
     {% endblock %}
