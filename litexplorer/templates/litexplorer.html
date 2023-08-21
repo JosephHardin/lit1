@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 {% extends "index.html" %}
-{% block mytest %}
-<body class="">
-    <div class="wrapper">
+
+{% block heroArea %}
 
 
-        <div class="text">
-            <h1> Did this work</h1>
-
+<div class="hero-area-l2  position-relative z-index-1 bg-skeptic">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 order-lg-1 order-1">
+            <div class="content">
+              <h2>Build a Citation Map </h2>
+              <p>Create a network map of every </p>
+              <div class="location-search-area">
+                <form action="/" class="location-search-area__search-form">
+                  <div class="d-md-flex justify-content-between align-items-center">
+                    <div class="d-sm-flex">
+                      <div class="location-search-area__dropdown">
+                        <div class="location-heading">
+                          <label>Locations</label>
+                        </div>
+                        <select name="country" id="country" class="nice-select focus-reset border-0">
+                          <option data-display="Select your destinations">Choose your identifier</option>
+                          <option value="">PMID</option>
+                          <option value="">PMCID</option>
+                          <option value="">Title</option>
+                          <option value="">DOI</option>
+                        </select>
+                      </div>
+                      <div class="location-type__input">
+                        <div class="location-type">
+                          <label>Type</label>
+                          <input type="text" class="form-control" name="type" id="type" placeholder="Value">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="location-search-area__search-btn">
+                      <button class="btn btn-style-03 btn--search">Explore Now</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="popular-search-area">
+                <h6>Example PMCIDs: <span>PMC4241956, PMC10223874, PMC5334499 </span></h6>
+              </div>
+            </div>
+          </div>
+          <div class="off-right-xxl-1 col-xxl-5 col-xl-5 col-lg-6 col-md-8 order-lg-1 order-0">
+            <div class="hero-image-group-l2">
+              <div class="image-1">
+                <img src="image/landing-2/hero-image.png" alt="image">
+              </div>
+              <div class="image-2">
+                <img src="image/landing-2/hero-pattern.png" alt="image">
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+
+
+
 {% endblock %}
 
 </html>
