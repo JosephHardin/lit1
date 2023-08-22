@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends "index.html" %}
+{% block PageTitle %}
+<title>Register</title>
+{% endblock %}
+
+{% block heroArea %}
+
+<div class="sign-up-2">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-6 col-md-8">
+            <div class="sign-up-2-box  justify-content-lg-end">
+              <div class="heading text-center">
+                <h2>Sign up</h2>
+                <p>No credit card required</p>
+              </div>
+              <form action="#">
+                <div class="form-group">
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Your name*">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" id="email" class="form-control" placeholder="Email address*">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="password" id="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="password2" id="password2" class="form-control" placeholder="Confirm Password">
+                </div>
+                <div class="keep-sign-area">
+                  <div class="check-form d-inline-block">
+                    <label for="terms-check" class="check-input-control d-flex align-items-center mb-0">
+                      <input class="d-none" type="checkbox" id="terms-check">
+                      <span class="checkbox checkbox-2 rounded-check-box "></span>
+                      <span class="remember-text">I agree to the Terms & Conditions</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="sign-in-log-btn">
+                  <button class="btn focus-reset">Submit</button>
+                </div>
+                <div class="create-new-acc-text text-center">
+                  <p>Already have an account? <a href="sign-in-1.html">Sign in</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+
+
+
+</html>

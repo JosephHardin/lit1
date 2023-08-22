@@ -10,3 +10,8 @@ class HomePageView(TemplateView):
 class LoginView(TemplateView):
     def get(self, request, **kwargs):
         return render(request, 'login.html', context=None)
+
+
+class RegisterView(TemplateView):
+    def get(self, request, **kwargs):
+        return render(request, 'register.html', context=None)
