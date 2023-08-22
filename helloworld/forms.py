@@ -4,4 +4,5 @@ class UserForm(forms.ModelForm):
         model = User
         widgets = {
         'password': forms.PasswordInput(),
+        'password2': forms.PasswordInput()
     }
