@@ -1,5 +1,6 @@
 
-
+from Bio import Entrez
+import pandas as pd
 
 def trythis(id):
     print("ID is:", id)
@@ -15,7 +16,76 @@ def check_id(id):
   if id[0:3] == "PMC" :
     id = id[3:]
   return id
+def get_alt_ids(id, db = 'pmc'):
 
+    id = check_id(id)
+    if db == 'pmc':
+      link = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/elink.fcgi?dbfrom=pmc&id=' + id
+      with open(wget.download(link)) as xmlFile:
+        try:
+          dataDict = xmltodict.parse(xmlFile.read())
+          pmid = dataDict.get('eLinkResult').get('LinkSet').get('LinkSetDb')[0].get('Link').get('Id')
+          return pmid
+        except:
+          return None
+
+
+    return None
+
+
+#For context of link builder see  this link https://www.ncbi.nlm.nih.gov/pmc/tools/cites-citedby/
+#This function takes a PMC Id and searches Pubmed Central (PMC) for all articles it cited
+def get_parents(id, db = 'pmc'):
+  link_list = []
+  id = check_id(id)
+  try:
+    links = Entrez.elink(dbfrom=db, id=id, linkname="pmc_pmc_cites")
+
+    record = Entrez.read(links)
+  #print(record)
+
+    records = record[0][u'LinkSetDb'][0][u'Link']
+  except:
+    print("couldn't get parents for pmcid:", id)
+    return [None]
+  for link in records:
+    link_list.append("PMC" + link[u'Id'])
+
+  return link_list
+
+#For context of link builder see  this link https://www.ncbi.nlm.nih.gov/pmc/tools/cites-citedby/
+#This function takes a PMC Id and searches Pubmed Central (PMC) for all articles that cited the given PMC Id
+def get_children(id, db = "pmc"):
+  link_list = []
+  id = check_id(id)
+  try:
+    links = Entrez.elink(dbfrom='pubmed', id=id, linkname="pmc_pmc_citedby")
+    record = Entrez.read(links)
+
+
+    records = record[0][u'LinkSetDb'][0][u'Link']
+  except:
+    print("couldn't get children for for pmcid:", id)
+    return [None]
+  for link in records:
+    link_list.append("PMC" + link[u'Id'])
+
+  return link_list
+def get_similiar(id, n = 20):
+  link_list = []
+  id = check_id(id)
+  links = Entrez.elink(dbfrom="pmc", db= "pmc", id=id, cmd="neighbor_score")
+  record = Entrez.read(links)
+  #print(record)
+  try:
+    records = record[0][u'LinkSetDb'][0][u'Link']
+    for link, limit in zip(records, range(n)):
+      link_list.append({"PMC" + link[u'Id']: link[u'Id'].values() })
+  except Exception as e:
+    print(e)
+    print("couldn't get similiar for pmcid:", id)
+    return [None]
+  return link_list
 def get_medline(id, db = 'pmc'):
   try:
     if db == 'pmc':
@@ -101,3 +171,5 @@ def start(root):
 
     else:
         rootDf.at[root, 'isValidId'] = False
+
+    print(rootDf)
