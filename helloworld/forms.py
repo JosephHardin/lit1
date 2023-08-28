@@ -1,8 +1,11 @@
-from django import forms
-class UserForm(forms.ModelForm):
+from django.forms import ModelForm
+from helloworld.models import User
+class UserForm(ModelForm):
     class Meta:
         model = User
-        widgets = {
-        'password': forms.PasswordInput(),
-        'password2': forms.PasswordInput()
-    }
+        fields = "__all__"
+        #widgets = {
+        #'password': forms.PasswordInput(),
+        #'password2': forms.PasswordInput()
+    #}
+

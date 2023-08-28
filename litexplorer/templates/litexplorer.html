@@ -13,7 +13,9 @@
               <h2>Build a Citation Map </h2>
               <p>Create a network map of every </p>
               <div class="location-search-area">
-                <form action="/" class="location-search-area__search-form">
+                <form action="./idsubmit/" method= "post" class="location-search-area__search-form">
+                    {% csrf_token %}
+                    {{ form }}
                   <div class="d-md-flex justify-content-between align-items-center">
                     <div class="d-sm-flex">
                       <div class="location-search-area__dropdown">
@@ -22,14 +24,14 @@
                         </div>
                         <select name="idtype" id="idtype" class="nice-select focus-reset border-0">
                           <option data-display="Select your destinations">Choose your identifier</option>
-                          <option value="">PMID</option>
-                          <option value="">PMCID</option>
+                          <option value="pmid">PMID</option>
+                          <option value="pmcid">PMCID</option>
                         </select>
                       </div>
                       <div class="location-type__input">
                         <div class="location-type">
                           <label>Value</label>
-                          <input type="text" class="form-control" name="value" id="value" placeholder="Value">
+                          <input type="text" class="form-control" name="id" id="id" placeholder="ID">
                         </div>
                       </div>
                     </div>
@@ -47,10 +49,10 @@
           <div class="off-right-xxl-1 col-xxl-5 col-xl-5 col-lg-6 col-md-8 order-lg-1 order-0">
             <div class="hero-image-group-l2">
               <div class="image-1">
-                <img src="image/landing-2/hero-image.png" alt="image">
+                <img src="../../helloworld/static/Shade/image/landing-2/hero-image.png" alt="image">
               </div>
               <div class="image-2">
-                <img src="image/landing-2/hero-pattern.png" alt="image">
+                <img src="../../helloworld/static/Shade/image/landing-2/hero-pattern.png" alt="image">
               </div>
             </div>
           </div>
@@ -61,5 +63,6 @@
 
 
 {% endblock %}
+
 
 </html>
