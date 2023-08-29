@@ -15,11 +15,11 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls.static import static
-from django.conf.urls import include, url
+from django.urls import include, path
 from django.contrib import admin
 
 urlpatterns = [
-   url(r'^admin/', admin.site.urls),
-   url(r'^', include('helloworld.urls')),
-   url(r'^litexplorer/', include('litexplorer.urls'))
+   path('admin/', admin.site.urls),
+   path('', include('helloworld.urls')),
+   path('litexplorer/', include('litexplorer.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
