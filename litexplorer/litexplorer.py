@@ -167,116 +167,91 @@ def build_cite_graph(citeDf):
 #Takes CiteDataFrame, Returns Directional Vertex Graph of Citations
 
 """
-def build_cite_df(citeDf,degrees):
+def build_citedb(degrees):
   for i in range(degrees):
+      for e in docdb.objects.all().filter(degree=i):
+          parentIds = e.parents.replace("'","").strip("][").strip().split(",")
+          childrenIds = e.children.replace("'","").strip("][").split(",")
+          lstOfIds = parentIds + childrenIds
+          #print(lstOfIds)
+          if len(lstOfIds) > 0:
+              for j in lstOfIds:
+                j = j.strip()
+                #print(j)
+                if not docdb.objects.filter(pmcid=j).exists():
+                  medline = get_medline(j)
+                  if medline[0] != None:
+                    if i < degrees-1:
+                      parents = get_parents(j)
+                      children = get_children(j)
+    
+                    else:
+                      parents= [None]
+                      children= [None]
+    
+                    if parents[0] is not None:
+                      numParents = len(parents)
+                    else:
+                      numParents = 0
+                    if children[0] is not None:
+                      numChildren = len(children)
+                    else:
+                      numChildren = 0
+                    x = docdb(pmcid=medline[0],
+                        pmid=medline[1],
+                        isValidId=True,
+                        title=medline[2],
+                        abstract=medline[3],
+                        author=medline[4],
+                        degree=i+1,
+                        parents=parents,
+                        children=children,
+                        numparents=numParents,
+                        numchildren=numChildren
+                        )
+                    x.save()
+    
+  #print(docdb.objects.all().values())
 
-    parentIds = citeDf[citeDf.Degree == i].Parents.values[0]
-    #print(parentIds)
-    childrenIds = citeDf[citeDf.Degree == i].Children.values[0]
-    #print(childrenIds)
 
-    lstOfIds = parentIds+childrenIds
-
-    #print(i)
-    #print(lstOfIds)
-    if len(lstOfIds) > 0:
-
-      for j in lstOfIds:
-        if j != None:
-          #print(j)
-          if j not in citeDf['PMCID']:
-              medline = get_medline(j)
-              if medline[0] != None:
-                citeDf.at[j, 'PMCID'] = medline[0]
-                citeDf.at[j, 'isValidId'] = True
-                citeDf.at[j, 'PMID'] = medline[1]
-                citeDf.at[j, 'Title'] =medline[2]
-                citeDf.at[j, 'Abstract'] =medline[3]
-                citeDf.at[j, 'Authors'] =medline[4]
-                citeDf.at[j, 'Degree']  = i+1
-                if (citeDf.at[j,'isValidId']) and (i < degrees-1):
-                  citeDf.at[j, 'Parents'] = get_parents(j)
-                  citeDf.at[j, 'Children'] = get_children(j)
-
-                else:
-                  citeDf.at[j, 'Parents'] = [None]
-                  citeDf.at[j, 'Children'] = [None]
-
-                if citeDf.at[j, 'Parents'][0] != None:
-                  citeDf.at[j, 'NumParents'] = len(citeDf.at[j, 'Parents'])
-                else:
-                  citeDf.at[j, 'NumParents'] = 0
-                if citeDf.at[j, 'Children'][0] != None:
-                  citeDf.at[j, 'NumChildren'] = len(citeDf.at[j, 'Children'])
-                else:
-                  citeDf.at[j, 'NumChildren'] = 0
-
-
-              else:
-                citeDf.at[j,'isValidId'] = False
-
-  return citeDf[citeDf.isValidId]
 
 def start(root):
     degrees = 2
     Entrez.email = "joe.hardin369@gmail.com"
-    rootDf = pd.DataFrame(columns=["PMCID",  # Primary Key/ Index Pubmed Central
-                                   "PMID",  # Pubmed
-                                   "isValidId",  # Boolean.  Did we find any record of this on Pubmed
-                                   "Title",  # If we did, string value indicating title.  If not found None or NaN
-                                   "Abstract",  # string value indicating fetched Abstract.  If not found None or NaN
-                                   "Authors",  # List of Strings of Authors
-                                   "Degree",
-                                   # Degrees from root.  Root is 0, its parents and children are 1, theirs are 2 if they aren't 1, etc.
-                                   "Parents",  # Articles this specific article cited in PMC database
-                                   "NumParents",  # Number of Parents
-                                   "Children",
-                                   # Articles this specific article was cited by in later articles on PMC database
-                                   "NumChildren"  # Number of children
-                                   ])
-    # rootDf.set_index('PMCID', inplace = True)
+
     docdb.objects.all().delete()
     medline = get_medline(root)
-    rootDf.at[root, 'PMCID'] = medline[0]
 
-    if (medline[0] is None) or (medline[0].lower() != root.lower() ):
-        x = docdb(pmcid = root, isValidId= False )
+    if (medline[0] is None) or (medline[0].lower() != root.lower()):
+        x = docdb(pmcid=root, isValidId=False)
         x.save()
         return
-    if medline[0] is not None:  # and medline[0].lower() == root.lower() :
 
-        rootDf.at[root, 'isValidId'] = True
-        rootDf.at[root, 'PMID'] = medline[1]
-        rootDf.at[root, 'Title'] = medline[2]
-        rootDf.at[root, 'Abstract'] = medline[3]
-        rootDf.at[root, 'Authors'] = medline[4]
-        rootDf.at[root, 'Degree'] = 0
-        parents = get_parents(root)
-        children = get_children(root)
-        if parents[0] is not None:
-            parentlen = len(parents)
-        else:
-            parentlen = 0
-        if children[0] is not None:
-            childrenlen = len(children)
-        else:
-            childrenlen = 0
-
-        x = docdb(pmcid=medline[0],
-                  pmid=medline[1],
-                  isValidId=True,
-                  title = medline[2],
-                  abstract = medline[3],
-                  author = medline[4],
-                  degree = 0,
-                  parents= parents,
-                  children= children,
-                  numparents= parentlen,
-                  numchildren= childrenlen
-        )
-        x.save()
-        print(docdb.objects.all().values())
-
+    parents = get_parents(root)
+    children = get_children(root)
+    if parents[0] is not None:
+        parentlen = len(parents)
+    else:
+        parentlen = 0
+    if children[0] is not None:
+        childrenlen = len(children)
+    else:
+        childrenlen = 0
+    x = docdb(pmcid=medline[0],
+              pmid=medline[1],
+              isValidId=True,
+              title = medline[2],
+              abstract = medline[3],
+              author = medline[4],
+              degree = 0,
+              parents= parents,
+              children= children,
+              numparents= parentlen,
+              numchildren= childrenlen
+    )
+    x.save()
+    #print(docdb.objects.all().values())
+    build_citedb(degrees)
 
 
 
