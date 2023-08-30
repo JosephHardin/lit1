@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'ebdjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'litdb',
+        'NAME': 'lit1db2',
         'USER': 'postgres',
         'PASSWORD': 'college4',
-        'HOST': 'database-1.cqmyzcbz1ltq.us-east-1.rds.amazonaws.com',
+        'HOST': 'lit1db2.cqmyzcbz1ltq.us-east-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
