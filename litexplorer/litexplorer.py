@@ -169,6 +169,7 @@ def build_cite_graph(citeDf):
 """
 def build_citedb(degrees):
   for i in range(degrees):
+      print("Now working on degree", i)
       for e in docdb.objects.all().filter(degree=i):
           parentIds = e.parents.replace("'","").strip("][").strip().split(",")
           childrenIds = e.children.replace("'","").strip("][").split(",")
@@ -197,26 +198,31 @@ def build_citedb(degrees):
                       numChildren = len(children)
                     else:
                       numChildren = 0
-                    x = docdb(pmcid=medline[0],
-                        pmid=medline[1],
-                        isValidId=True,
-                        title=medline[2],
-                        abstract=medline[3],
-                        author=medline[4],
-                        degree=i+1,
-                        parents=parents,
-                        children=children,
-                        numparents=numParents,
-                        numchildren=numChildren
-                        )
-                    x.save()
+                    try:
+                        x = docdb(pmcid=medline[0],
+                            pmid=medline[1],
+                            isValidId=True,
+                            title=medline[2],
+                            abstract=medline[3],
+                            author=medline[4],
+                            degree=i+1,
+                            parents=parents,
+                            children=children,
+                            numparents=numParents,
+                            numchildren=numChildren
+                            )
+                        x.save()
+                    except Exception as k:
+                        print(medline)
+                        print(k)
+
     
   #print(docdb.objects.all().values())
 
 
 
 def start(root):
-    degrees = 2
+    degrees = 1
     Entrez.email = "joe.hardin369@gmail.com"
 
     docdb.objects.all().delete()
