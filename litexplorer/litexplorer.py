@@ -2,8 +2,7 @@
 from Bio import Entrez
 from .models import docdb, citedb, iddb
 from time import time
-import xmltodict
-#import graph_tool.all as gt
+
 def check_id(id):
   if not isinstance(id, str):
     print("ID is not a string: ", type(id))
@@ -282,6 +281,7 @@ def start(root):
         st = time()
 
     get_medline()
+    iddb.objects.filter(isValidId=False).delete()
     """
     if (medline[0] is None) or (medline[0].lower() != root.lower()):
         iddb(pmcid=root, isValidId=False, degree=0).save()
