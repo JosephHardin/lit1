@@ -29,5 +29,12 @@ class docdb(models.Model):
     def __str__(self):
         return self.pmcid
 class citedb(models.Model):
-    parent = models.ForeignKey(iddb, on_delete=models.CASCADE, related_name="parent")
-    child = models.ForeignKey(iddb, on_delete=models.CASCADE, related_name="child")
+    parent = models.ForeignKey(iddb, on_delete=models.CASCADE, related_name="parent+")
+    child = models.ForeignKey(iddb, on_delete=models.CASCADE, related_name="child+")
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['parent', 'child'], name='unique_migration_host_combination'
+            )
+        ]

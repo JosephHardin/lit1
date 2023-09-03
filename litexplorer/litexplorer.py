@@ -2,6 +2,7 @@
 from Bio import Entrez
 from .models import docdb, citedb, iddb
 from time import time
+import xmltodict
 #import graph_tool.all as gt
 def check_id(id):
   if not isinstance(id, str):
@@ -35,75 +36,110 @@ def get_alt_ids(id, db = 'pmc'):
 #For context of link builder see  this link https://www.ncbi.nlm.nih.gov/pmc/tools/cites-citedby/
 #This function takes a PMC Id and searches Pubmed Central (PMC) for all articles it cited
 def get_parents(degree, db = 'pmc'):
+    st = time()
     roots = iddb.objects.all().filter(degree=degree)
     if len(roots) < 1:
         return
     ids = []
     for i in roots:
         ids.append(check_id(getattr(i, "pmcid")))
-    print(ids)
+    # print(ids)
     links = Entrez.elink(dbfrom=db, id=ids, linkname="pmc_pmc_cites")
 
     records = Entrez.read(links)
+    print("Time it takes to fetch children records", time() - st)
+    st = time()
+    newIds = []
+    if len(records) == 0:
+        print("No child records found")
+        return
+    # print("In Records")
+    # print(records)
+    clist = []
+    for record, child in zip(records, roots):
+        if len(record[u'LinkSetDb']) > 0:
 
-    if len(records) > 0:
-        print("In Records")
-        print(records)
-        for record, child in zip(records, roots):
-            if len(record[u'LinkSetDb']) > 0:
-                for link in record[u'LinkSetDb'][0][u'Link']:
-                    print(link)
-                    try:
-                        childId = "PMC" + link[u'Id']
-                        if iddb.objects.filter(pmcid=childId).exists():
-                            parent = iddb.objects.get(pmcid=childId)
-                        else:
-                            newid = iddb(pmcid=childId, degree=degree + 1)
-                            newid.save()
-                            parent = iddb.objects.get(pmcid=childId)
 
-                        x = citedb(child=child, parent=parent)
-                        x.save()
-                    except Exception as e:
-                        print("Couldn't get children for PMC", getattr(child, "pmcid"))
-                        print(e)
+            for link in record[u'LinkSetDb'][0][u'Link']:
+                # print(link)
+                try:
+                    newIds.append(iddb(pmcid="PMC" + link[u'Id'], degree=degree + 1))
+                    clist.append(child)
+                except Exception as e:
+                    print("Couldn't get children for PMC", getattr(child, "pmcid"))
+                    print(e)
+
+    # print(datas)
+    plist = iddb.objects.bulk_create(newIds, ignore_conflicts=True)
+    # example = iddb.objects.filter(pmcid=set(plist))
+    print("Parent list ", len(plist), "  ", plist[0])
+    print("Child list ", len(clist), "  ", clist[0])
+
+    print("Time it takes to add parent records to iddb", time() - st)
+    x = citedb()
+    for parent, child in zip(plist, clist):
+        try:
+            x = citedb(parent=parent, child=child)
+            x.save()
+        except:
+            pass
+
+    print("Time it takes to add parent records to citedb", time() - st)
     return
 
 #For context of link builder see  this link https://www.ncbi.nlm.nih.gov/pmc/tools/cites-citedby/
 #This function takes a PMC Id and searches Pubmed Central (PMC) for all articles that cited the given PMC Id
 def get_children(degree, db = 'pmc'):
+    #st = time()
     roots = iddb.objects.all().filter(degree=degree)
     if len(roots) < 1:
         return
     ids = []
     for i in roots:
         ids.append(check_id(getattr(i, "pmcid")))
-    print(ids)
+    #print(ids)
     links = Entrez.elink(dbfrom=db, id=ids, linkname="pmc_pmc_citedby")
 
     records = Entrez.read(links)
+    #print("Time it takes to fetch children records", time() - st)
+    #st = time()
+    newIds = []
+    if len(records) == 0:
+        print("No child records found")
+        return
+    #print("In Records")
+    #print(records)
+    plist = []
+    clist = []
+    for record, parent in zip(records, roots):
+        if len(record[u'LinkSetDb']) > 0:
 
-    if len(records) > 0:
-        print("In Records")
-        print(records)
-        for record, parent in zip(records, roots):
-            if len(record[u'LinkSetDb']) > 0:
-                for link in record[u'LinkSetDb'][0][u'Link']:
-                    print(link)
-                    try:
-                        childId = "PMC" + link[u'Id']
-                        if iddb.objects.filter(pmcid=childId).exists():
-                            child = iddb.objects.get(pmcid=childId)
-                        else:
-                            newid = iddb(pmcid=childId, degree=degree+1)
-                            newid.save()
-                            child = iddb.objects.get(pmcid=childId)
+            parentid = parent.pmcid
+            for link in record[u'LinkSetDb'][0][u'Link']:
+                #print(link)
+                try:
+                    newIds.append(iddb(pmcid="PMC" + link[u'Id'], degree= degree+1))
+                    plist.append(parent)
+                    clist.append("PMC" + link[u'Id'])
+                except Exception as e:
+                    print("Couldn't get children for PMC", getattr(parent, "pmcid"))
+                    print(e)
 
-                        x = citedb(child=child, parent=parent)
-                        x.save()
-                    except Exception as e:
-                        print("Couldn't get children for PMC", getattr(parent, "pmcid"))
-                        print(e)
+    #print(datas)
+    clist = iddb.objects.bulk_create(newIds, ignore_conflicts= True)
+    #example = iddb.objects.filter(pmcid=set(plist))
+
+
+    #print("Time it takes to add children records to iddb", time() - st)
+    x = citedb()
+    for parent, child in zip(plist,clist):
+        try:
+            x = citedb(parent = parent, child= child)
+            x.save()
+        except:
+            pass
+
+    #print("Time it takes to add children records to citedb", time() - st)
     return
 def get_similiar(id, n = 20):
   link_list = []
@@ -120,50 +156,71 @@ def get_similiar(id, n = 20):
     print("couldn't get similiar for pmcid:", id)
     return [None]
   return link_list
-def get_medline(id, db = 'pmc'):
-  st = time()
-  print("Starting medline")
-  try:
+def get_medline(db = 'pmc'):
+    st = time()
+    print("Starting medline")
+    id = list(iddb.objects.values_list('pmcid', flat=True))
+
+    for i in range(len(id)):
+        id[i] = check_id(id[i])
     if db == 'pmc':
       handle = Entrez.efetch(db=db, id=id, retmode='text', rettype='medline')
-      record = handle.read()
 
-    print("Time to fetch record", time() - st)
-    if len(record) == 0:
-      return None
-    lsOfStr = [""]
-    for i in record.splitlines():
-      if len(i) > 0:
-        if i[0]!=" ":
-          lsOfStr.append(i)
-        else:
-         lsOfStr[len(lsOfStr) - 1] += " " + i.strip()
-    pmcid, pmid, title, abstract = None, None, None, None
+      records = str(handle.read()).split('\n\n')
+      #print(records)
 
-    authors = []
-    for i in lsOfStr:
-      #print (i)
-      if len(i) > 4:
-        if i[0:3] == "PMC":
-          pmcid = i.split('-', 1)[1].strip()
-          #print(pmcid)
-        elif i[0:4] == "PMID":
-          pmid = i.split('-', 1)[1].strip()
-          #print(pmid)
-        elif i[0:2] == "TI":
-          title = i.split('-', 1)[1].strip()
-          #print(title)
-        elif i[0:2] == "AB":
-          abstract = i.split('-', 1)[1].strip()
-          #print(abstract)
-        elif i[0:3] == "FAU":
-          authors.append(i.split('-', 1)[1].strip())
-          #print(authors)
-    print("Time to parse", time() - st)
-    return [pmcid, pmid, title, abstract, authors]
-  except:
-    print("Couldn't get medline for id=", id)
-    return [None,None,None,None,None]
+    else:
+        return
+
+    medlist = []
+    #print("Time to fetch record", time() - st)
+    for record, id in zip(records, iddb.objects.all()):
+        st = time()
+        if len(record) == 0:
+            print("Couldn't get medline for ", id)
+            continue
+        lsOfStr = [""]
+        authors = []
+        pmcid, title, abstract = None, None, None
+        for i in record.splitlines():
+            if len(i) > 0:
+                if i[0] != " ":
+                    lsOfStr.append(i)
+                else:
+                    lsOfStr[len(lsOfStr) - 1] += " " + i.strip()
+        for i in lsOfStr:
+            # print (i)
+            if len(i) > 4:
+                if i[0:3] == "PMC":
+                    pmcid = i.split('-', 1)[1].strip()
+                    #print("Id fetched is ", pmcid, " id I thought it should be is ", id, "And it evaluates as", pmcid == id.pmcid)
+
+                elif i[0:2] == "TI":
+                    title = i.split('-', 1)[1].strip()
+                    # print(title)
+                elif i[0:2] == "AB":
+                    abstract = i.split('-', 1)[1].strip()
+                    # print(abstract)
+                elif i[0:3] == "FAU":
+                    authors.append(i.split('-', 1)[1].strip())
+                    # print(authors)
+
+
+        if pmcid == id.pmcid:
+            id.isValidId = True
+            id.save()
+            x = docdb(pmcid= id, title= title, abstract=abstract, author=authors)
+            x.save()
+
+        authors = []
+        title = ""
+        abstract = ""
+
+
+        #print("Time to parse", time() - st)
+       #medlist.append([id, title, abstract, authors])
+    #print(medlist)
+    return
 """
 def build_cite_graph(citeDf):
   citeDf
@@ -205,98 +262,40 @@ def build_cite_graph(citeDf):
 #Takes CiteDataFrame, Returns Directional Vertex Graph of Citations
 
 """
-def build_citedb(degrees):
-    start = time()
-    for i in range(degrees):
-        print("Now working on degree", i)
-        idset = {}
-        for e in docdb.objects.all().filter(degree=i):
-            end = time()
-            print("Start of loop 1", end-start)
-            parentIds = citedb.objects.all().filter(parents = e.pmcid)
-            childrenIds = e.children.replace("'","").strip("][").split(",")
-            lstOfIds = parentIds + childrenIds
-            #print(lstOfIds)
-            if len(lstOfIds) > 0:
-                for j in lstOfIds:
-                    j = j.strip()
-                    if not docdb.objects.filter(pmcid=j).exists():
-                        idset.add(j.strip())
-                #print(j)
-        print(idset)
-
-        medline = get_medline(j)
-        end = time()
-        print("Just got medline", end-start)
-        #if medline[0] != None:
-        if i < degrees-1:
-          parents = get_parents(j)
-          children = get_children(j)
-
-        else:
-          parents= [None]
-          children= [None]
-
-        if parents[0] is not None:
-          numParents = len(parents)
-        else:
-          numParents = 0
-        if children[0] is not None:
-          numChildren = len(children)
-        else:
-          numChildren = 0
-        swrite = time()
-        try:
-            x = docdb(pmcid=medline[0],
-                pmid=medline[1],
-                isValidId=True,
-                title=medline[2],
-                abstract=medline[3],
-                author=medline[4],
-                degree=i+1,
-                parents=parents,
-                children=children,
-                numparents=numParents,
-                numchildren=numChildren
-                )
-            x.save()
-            ewrite = time()
-            print("It took this long to write to the database", ewrite-swrite)
-        except Exception as k:
-            print(medline)
-            print(k)
-
-
-    print("done")
-    return
 
 
 
 def start(root):
-    degrees = 0
+    degrees = 1
     Entrez.email = "joe.hardin369@gmail.com"
 
     deletedb()
-    medline = get_medline(root)
 
+    iddb(pmcid=root, degree=0).save()
+    st = time()
+    for d in range(degrees):
+        get_children(d)
+        print("got children for ", d, " in ", time()-st)
+        st = time()
+        get_parents(d)
+        print("got parents for ", d, " in ", time() - st)
+        st = time()
+
+    get_medline()
+    """
     if (medline[0] is None) or (medline[0].lower() != root.lower()):
-        iddb(pmcid=root, isValidId=False, degree= 0).save()
+        iddb(pmcid=root, isValidId=False, degree=0).save()
         return
-
-    x = iddb(pmcid=medline[0], isValidId=True, degree=0)
+   
+    x = iddb(pmcid=medline[0], degree=0)
     x.save()
     y = docdb(x,
               title=medline[2],
               abstract=medline[3],
               author=medline[4],
-             )
+              )
     y.save()
-    x = iddb(pmcid=medline[0], isValidId=True, degree=0)
-    x.save()
-
-
-    get_children(0)
-    get_parents(0)
+    """
     print(iddb.objects.all().values())
     print(docdb.objects.all().values())
     print(citedb.objects.all().values())
