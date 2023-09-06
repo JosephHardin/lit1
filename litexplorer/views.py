@@ -1,13 +1,25 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpRequest
 
 import litexplorer.litexplorer
 from .forms import IdForm
 # Create your views here.
 class LitExplorerView(TemplateView):
+    template_name = "litexplorer.html"
     def get(self, request, **kwargs):
-        return render(request, 'litexplorer.html', context=None)
+        print("I AM HEAR AND KWARGS IS")
+        if 'errormessage' in kwargs:
+            print("errormessage equals " + kwargs.get("errormessage"))
+        else:
+            print(kwargs)
+        print("And get is ")
+        print(request.GET)
+        context = {}
+        context['noid'] = int(request.GET.get('noid', 0))
+        print(context)
+        return render(request, 'litexplorer.html', context=context)
+
 
 
 
@@ -33,4 +45,5 @@ def get_id(request):
     else:
         form = IdForm()
 
-    return HttpResponseRedirect("/litexplorer/")
+
+    return HttpResponseRedirect("/litexplorer/?noid=1")

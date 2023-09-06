@@ -57,10 +57,21 @@
           </div>
         </div>
       </div>
+
     </div>
-
-
-
+{% if noid == 1 %}
+<div class="hero-area-l2  position-relative z-index-1 bg-skeptic">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 order-lg-1 order-1">
+            <div class="content">
+              <h2>Could Not Find ID {{ noid }}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endif %}
 {% endblock %}
 
 
