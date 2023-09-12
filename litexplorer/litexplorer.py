@@ -140,21 +140,7 @@ def get_children(degree, db = 'pmc'):
 
     #print("Time it takes to add children records to citedb", time() - st)
     return
-def get_similiar(id, n = 20):
-  link_list = []
-  id = check_id(id)
-  links = Entrez.elink(dbfrom="pmc", db= "pmc", id=id, cmd="neighbor_score")
-  record = Entrez.read(links)
-  #print(record)
-  try:
-    records = record[0][u'LinkSetDb'][0][u'Link']
-    for link, limit in zip(records, range(n)):
-      link_list.append({"PMC" + link[u'Id']: link[u'Id'].values() })
-  except Exception as e:
-    print(e)
-    print("couldn't get similiar for pmcid:", id)
-    return [None]
-  return link_list
+
 def get_medline(db = 'pmc'):
     st = time()
     print("Starting medline")
@@ -282,29 +268,14 @@ def start(root):
 
     get_medline()
     iddb.objects.filter(isValidId=False).delete()
-    """
-    if (medline[0] is None) or (medline[0].lower() != root.lower()):
-        iddb(pmcid=root, isValidId=False, degree=0).save()
-        return
-   
-    x = iddb(pmcid=medline[0], degree=0)
-    x.save()
-    y = docdb(x,
-              title=medline[2],
-              abstract=medline[3],
-              author=medline[4],
-              )
-    y.save()
-    """
-    print(iddb.objects.all().values())
-    print(docdb.objects.all().values())
-    print(citedb.objects.all().values())
-    #print(citedb.objects.all())
+    numRel = len(iddb.objects.all())
+    if numRel == 0:
+        return [False]
+    else:
+        rootrec = docdb.objects.get(pmcid=root)
+        return [True, rootrec.title, str(numRel)]
 
 
-
-    #print(docdb.objects.all().values())
-    #build_citedb(degrees)
 
 
 

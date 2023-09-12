@@ -17,6 +17,9 @@ class LitExplorerView(TemplateView):
         print(request.GET)
         context = {}
         context['noid'] = int(request.GET.get('noid', 0))
+        context['confirm'] = int(request.GET.get('confirm', 0))
+        context['title'] = request.GET.get('title', "No Title Found")
+        context['numrel'] = int(request.GET.get('numrel', 0))
         print(context)
         return render(request, 'litexplorer.html', context=context)
 
@@ -38,8 +41,11 @@ def get_id(request):
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            litexplorer.litexplorer.start(form['id'].value())
-            return HttpResponseRedirect("/register/")
+            medlineInfo = litexplorer.litexplorer.start(form['id'].value())
+            if medlineInfo[0] == False:
+                return HttpResponseRedirect("/litexplorer/?noid=1")
+            else:
+                return HttpResponseRedirect("/litexplorer/?confirm=1&title="+medlineInfo[1]+"&numrel="+medlineInfo[2])
 
     # if a GET (or any other method) we'll create a blank form
     else:

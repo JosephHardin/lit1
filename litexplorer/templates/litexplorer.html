@@ -65,13 +65,39 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 order-lg-1 order-1">
             <div class="content">
-              <h2>Could Not Find ID {{ noid }}</h2>
+              <h3>Could Not Find ID </h3>
             </div>
           </div>
         </div>
       </div>
 </div>
 {% endif %}
+
+{% if confirm == 1 %}
+<div class="hero-area-l2  position-relative z-index-1 bg-skeptic">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 order-lg-1 order-1">
+            <div class="content">
+              <h3>Found Article Titled <br> "{{ title }}" <br> There are {{ numrel }} close relations based on citations</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+{% endif %}
+    <script src="cytoscape.min.js"></script>
+<div class="hero-area-l2  position-relative z-index-1 bg-skeptic">
+  <div class="container">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 order-lg-1 order-1">
+        <div class="content">
+          <h3>Found Article Titled <br> "{{ title }}" <br> There are {{ numrel }} close relations based on citations</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 
 

@@ -6,5 +6,4 @@ from litexplorer import views
 urlpatterns = [
     path('', views.LitExplorerView.as_view()),
     path('idsubmit/', views.get_id),
-    path('<int:noid>/', views.LitExplorerView.as_view()),
 ]
